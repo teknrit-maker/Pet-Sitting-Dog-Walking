@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pawcare provides trusted pet sitting, dog walking, and overnight care with seamless booking and real-time updates.">
+  <title>Pawcare | Pet Sitting & Dog Walking Service</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pawcare home">
+        <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+        <span class="brand-text">Pawcare</span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Home
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="index.html">Homepage 1</a>
+              <a class="dropdown-link" href="homepage-2.html">Homepage 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Services
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="Dogwalking.html">Dog Walking</a>
+              <a class="dropdown-link" href="pet sitting.html">Pet Sitting</a>
+              <a class="dropdown-link" href="overnight.html">Overnight Care</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="pet-tips.html">Pet Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Dashboard
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="clientdashboard.html">Client Dashboard</a>
+              <a class="dropdown-link" href="admindashboard.html">Admin Dashboard</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
+          <i class="fa-solid fa-align-right"></i>
+        </button>
+        <a class="btn btn-outline" href="login.html">Login</a>
+        <a class="btn btn-primary" href="contact.html">Book Now</a>
+        <button class="hamburger" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <section class="pet-tips-hero section" id="pet-tips-hero">
+  <div class="pet-tips-hero-bg">
+    <img src="../assets/images/pettips-hero-bg.avif" alt="Pet tips">
+  </div>
+
+  <div class="container pet-tips-hero-content" data-reveal>
+
+    <span class="hero-eyebrow">Pet Tips</span>
+
+    <h1 class="pet-tips-hero-title">
+      Guides, tips, and insights for happy pets
+    </h1>
+
+    <p class="pet-tips-hero-text">
+      Expert advice to help you care for your pet’s health, behavior, and daily routine with confidence.
+    </p>
+
+  </div>
+</section>
+<section class="featured-article section" id="featured-article">
+  <div class="container">
+
+    <div class="featured-article-card" data-reveal>
+
+      <!-- IMAGE -->
+      <div class="featured-article-image">
+        <img src="../assets/images/pettips-about-img.avif" alt="Pet care tips">
+      </div>
+
+      <!-- CONTENT -->
+      <div class="featured-article-content">
+
+        <span class="article-category">Dog Care</span>
+
+        <h2 class="article-title">
+          How to keep your dog happy and healthy every day
+        </h2>
+
+        <p class="article-excerpt">
+          Discover simple routines, nutrition tips, and daily habits that can improve your dog’s health and happiness.
+        </p>
+
+        <a href="#" class="btn btn-outline">Read More</a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="pet-categories section" id="pet-categories">
+  <div class="container">
+
+    <div class="categories-wrapper" data-reveal>
+
+      <button class="category-btn active" data-filter="all">All</button>
+      <button class="category-btn" data-filter="dog">Dog Care</button>
+      <button class="category-btn" data-filter="cat">Cat Care</button>
+      <button class="category-btn" data-filter="health">Health</button>
+      <button class="category-btn" data-filter="training">Training</button>
+      <button class="category-btn" data-filter="nutrition">Nutrition</button>
+
+    </div>
+
+  </div>
+</section>
+<section class="articles-grid section" id="articles">
+  <div class="container">
+
+    <div class="articles-wrapper">
+
+      <!-- ARTICLE -->
+      <div class="article-card" data-category="dog" data-reveal>
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=600&q=60" alt="Dog care">
+        </div>
+        <div class="article-content">
+          <span class="article-category">Dog Care</span>
+          <h3 class="article-title">Daily routines for a happy dog</h3>
+          <p class="article-text">
+            Simple habits that improve your dog’s physical and mental well-being.
+          </p>
+        </div>
+      </div>
+
+      <!-- ARTICLE -->
+      <div class="article-card" data-category="cat" data-reveal data-delay="1">
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=600&q=60" alt="Cat care">
+        </div>
+        <div class="article-content">
+          <span class="article-category">Cat Care</span>
+          <h3 class="article-title">Understanding your cat’s behavior</h3>
+          <p class="article-text">
+            Learn what your cat’s actions mean and how to respond effectively.
+          </p>
+        </div>
+      </div>
+
+      <!-- ARTICLE -->
+      <div class="article-card" data-category="health" data-reveal data-delay="2">
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=60" alt="Pet health">
+        </div>
+        <div class="article-content">
+          <span class="article-category">Health</span>
+          <h3 class="article-title">Essential pet health tips</h3>
+          <p class="article-text">
+            Keep your pet healthy with these simple preventive care tips.
+          </p>
+        </div>
+      </div>
+
+      <div class="article-card" data-category="training" data-reveal data-delay="3">
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=60" alt="Dog training">
+        </div>
+        <div class="article-content">
+          <span class="article-category">Training</span>
+          <h3 class="article-title">Loose-leash walking basics</h3>
+          <p class="article-text">
+            Calm, confident leash skills that make every walk enjoyable.
+          </p>
+        </div>
+      </div>
+
+      <div class="article-card" data-category="nutrition" data-reveal data-delay="4">
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=600&q=60" alt="Pet nutrition">
+        </div>
+        <div class="article-content">
+          <span class="article-category">Nutrition</span>
+          <h3 class="article-title">Balanced meals for active pets</h3>
+          <p class="article-text">
+            Fuel your pet with simple nutrition upgrades and smart portions.
+          </p>
+        </div>
+      </div>
+
+      <div class="article-card" data-category="dog" data-reveal data-delay="5">
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=600&q=60" alt="Dog enrichment">
+        </div>
+        <div class="article-content">
+          <span class="article-category">Dog Care</span>
+          <h3 class="article-title">Indoor enrichment for rainy days</h3>
+          <p class="article-text">
+            Simple games and toys to keep your dog engaged at home.
+          </p>
+        </div>
+      </div>
+
+      <div class="article-card" data-category="cat" data-reveal data-delay="6">
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=600&q=60" alt="Cat care tips">
+        </div>
+        <div class="article-content">
+          <span class="article-category">Cat Care</span>
+          <h3 class="article-title">Litter box best practices</h3>
+          <p class="article-text">
+            Keep things fresh, stress-free, and comfortable for your cat.
+          </p>
+        </div>
+      </div>
+
+      <div class="article-card" data-category="health" data-reveal data-delay="7">
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=600&q=60" alt="Seasonal pet health">
+        </div>
+        <div class="article-content">
+          <span class="article-category">Health</span>
+          <h3 class="article-title">Seasonal allergy warning signs</h3>
+          <p class="article-text">
+            Spot early symptoms and keep your pet comfortable all season.
+          </p>
+        </div>
+      </div>
+
+      <div class="article-card" data-category="training" data-reveal data-delay="8">
+        <div class="article-image">
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600&q=60" alt="Puppy training">
+        </div>
+        <div class="article-content">
+          <span class="article-category">Training</span>
+          <h3 class="article-title">Crate training without stress</h3>
+          <p class="article-text">
+            Step-by-step guidance for creating a safe, cozy crate routine.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="pet-safety section" id="pet-safety">
+  <div class="container">
+
+    <div class="section-heading" data-reveal>
+      <span class="section-eyebrow">Safety Essentials</span>
+      <h2 class="section-title">A calm plan for every pet emergency.</h2>
+      <p class="section-subtitle">Keep these essentials ready for confident, quick decisions.</p>
+    </div>
+
+    <div class="safety-grid">
+      <div class="safety-card" data-reveal>
+        <div class="safety-icon"><i class="fa-solid fa-kit-medical"></i></div>
+        <h3>First Aid Kit</h3>
+        <p>Bandages, antiseptic wipes, tick remover, and a digital thermometer.</p>
+      </div>
+      <div class="safety-card" data-reveal data-delay="1">
+        <div class="safety-icon"><i class="fa-solid fa-phone"></i></div>
+        <h3>Emergency Contacts</h3>
+        <p>Vet, 24/7 clinic, and poison control saved in one place.</p>
+      </div>
+      <div class="safety-card" data-reveal data-delay="2">
+        <div class="safety-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+        <h3>Care Checklist</h3>
+        <p>Up-to-date meds, feeding notes, and microchip details.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="newsletter section" id="newsletter">
+  <div class="container">
+
+    <div class="newsletter-box" data-reveal>
+
+      <h2 class="newsletter-title">
+        Get pet care tips in your inbox
+      </h2>
+
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+
+    </div>
+
+  </div>
+</section>
+  </main>
+    <footer class="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Pawcare home">
+            <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+            <span class="brand-text">Pawcare</span>
+          </a>
+          <p>Premium pet care with real-time updates, trusted sitters, and services designed around your pet's comfort.</p>
+          <span class="footer-trust">Trusted by 10K+ pet parents</span>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="pet-tips.html">Pet Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="Dogwalking.html">Dog Walking</a></li>
+            <li><a href="pet sitting.html">Pet Sitting</a></li>
+            <li><a href="services.html#overnight-care">Overnight Care</a></li>
+            <li><a href="services.html">All Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+            <li><a href="mailto:hello@pawcare.com">hello@pawcare.com</a></li>
+            <li>Mon-Sun: 7am-9pm</li>
+            <li>Serving NYC & nearby</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>(c) 2026 Pawcare. All rights reserved.</span>
+        <span>Privacy | Terms</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
+

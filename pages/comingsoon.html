@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pawcare is launching soon. Stay tuned for premium pet care.">
+  <title>Pawcare | Coming Soon</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="soon-body">
+  <main class="soon-page">
+    <div class="auth-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+      <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
+        <i class="fa-solid fa-align-right"></i>
+      </button>
+    </div>
+
+    <div class="soon-shell">
+      <section class="soon-content">
+        <a class="brand" href="index.html" aria-label="Pawcare home">
+          <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+          <span class="brand-text">Pawcare</span>
+        </a>
+
+        <span class="soon-label">Coming Soon</span>
+        <h1 class="soon-title">We're launching something amazing</h1>
+        <p class="soon-subtitle">Our platform is almost ready. Stay tuned for updates.</p>
+
+        <div class="soon-countdown" data-countdown data-target="2026-06-01T00:00:00">
+          <div class="countdown-item">
+            <span class="countdown-value" data-unit="days">00</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" data-unit="hours">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" data-unit="minutes">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+        </div>
+
+        <form class="soon-form" action="#" method="post">
+          <label class="soon-field">
+            <span>Email address</span>
+            <div class="soon-input">
+              <input type="email" name="email" placeholder="you@pawcare.com" autocomplete="email" required>
+              <button class="btn btn-primary" type="submit">Notify Me</button>
+            </div>
+          </label>
+        </form>
+
+        <div class="soon-social">
+          <span>Follow us</span>
+          <div class="soon-social-links">
+            <a class="icon-btn" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="icon-btn" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="icon-btn" href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="soon-visual" aria-label="Pet care preview">
+        <img class="soon-image" src="../assets/images/petlove.avif" alt="Pet owner hugging a dog">
+        <div class="soon-orb"></div>
+        <div class="soon-card">
+          <span class="soon-card-kicker">Launching Soon</span>
+          <h2>Premium care, effortlessly booked.</h2>
+          <p>Verified sitters, real-time updates, and concierge support for every visit.</p>
+          <div class="soon-badges">
+            <span class="soon-badge"><i class="fa-solid fa-shield-dog"></i> Verified sitters</span>
+            <span class="soon-badge"><i class="fa-solid fa-location-dot"></i> Live updates</span>
+            <span class="soon-badge"><i class="fa-solid fa-heart"></i> 10k+ pets loved</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    const countdown = document.querySelector("[data-countdown]");
+    if (countdown) {
+      const target = new Date(countdown.dataset.target);
+      const valueEls = countdown.querySelectorAll(".countdown-value");
+
+      const pad = (num) => String(num).padStart(2, "0");
+      const updateCountdown = () => {
+        const now = new Date();
+        const diff = Math.max(0, target - now);
+        const totalMinutes = Math.floor(diff / (1000 * 60));
+        const days = Math.floor(totalMinutes / (60 * 24));
+        const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
+        const minutes = totalMinutes % 60;
+        const values = { days, hours, minutes };
+
+        valueEls.forEach((el) => {
+          const unit = el.dataset.unit;
+          const nextValue = pad(values[unit] ?? 0);
+          if (el.textContent !== nextValue) {
+            el.textContent = nextValue;
+            el.classList.add("is-tick");
+            window.setTimeout(() => el.classList.remove("is-tick"), 260);
+          }
+        });
+      };
+
+      updateCountdown();
+      window.setInterval(updateCountdown, 1000);
+    }
+  </script>
+</body>
+</html>

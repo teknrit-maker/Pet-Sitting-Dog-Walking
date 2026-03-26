@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Documentation for the Pawcare Pet Sitting & Dog Walking template.">
+  <title>Pawcare Documentation</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="docs-body">
+  <header class="docs-header">
+    <div class="docs-header-inner">
+      <div class="docs-brand">
+        <a class="brand" href="../pages/index.html" aria-label="Pawcare home">
+          <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+          <span class="brand-text">Pawcare</span>
+        </a>
+        <div class="docs-title">
+          <span>Documentation</span>
+          <small>Pet Sitting &amp; Dog Walking Template</small>
+        </div>
+      </div>
+
+      <div class="docs-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
+          <i class="fa-solid fa-align-right"></i>
+        </button>
+        <button class="docs-menu-toggle" id="docsMenuToggle" type="button" aria-label="Toggle documentation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="docs-overlay" id="docsOverlay" aria-hidden="true"></div>
+
+  <main class="docs-layout">
+    <aside class="docs-sidebar" id="docsSidebar">
+      <div class="docs-sidebar-header">
+        <span class="docs-sidebar-title">Contents</span>
+        <span class="docs-sidebar-note">Updated Mar 26, 2026</span>
+      </div>
+      <nav class="docs-nav" aria-label="Documentation sections">
+        <a class="docs-nav-link is-active" href="#introduction">Introduction</a>
+        <a class="docs-nav-link" href="#getting-started">Getting Started</a>
+        <a class="docs-nav-link" href="#installation">Installation</a>
+        <a class="docs-nav-link" href="#folder-structure">Folder Structure</a>
+        <a class="docs-nav-link" href="#html-structure">HTML Structure</a>
+        <a class="docs-nav-link" href="#css-structure">CSS Structure</a>
+        <a class="docs-nav-link" href="#javascript-guide">JavaScript Guide</a>
+        <a class="docs-nav-link" href="#components">Components</a>
+        <a class="docs-nav-link" href="#pages-overview">Pages Overview</a>
+        <a class="docs-nav-link" href="#customization">Customization</a>
+        <a class="docs-nav-link" href="#dashboard-usage">Dashboard Usage</a>
+        <a class="docs-nav-link" href="#api-integration">API / Integration</a>
+        <a class="docs-nav-link" href="#faq">FAQ</a>
+        <a class="docs-nav-link" href="#support">Support</a>
+        <a class="docs-nav-link" href="#changelog">Changelog</a>
+      </nav>
+    </aside>
+
+    <article class="docs-content">
+      <section class="docs-section" id="introduction">
+        <div class="docs-section-header">
+          <span class="docs-kicker">Introduction</span>
+          <h1>Premium documentation for a premium template.</h1>
+          <p>This guide walks you through setup, customization, and best practices for the Pawcare Pet Sitting &amp; Dog Walking template.</p>
+        </div>
+        <div class="docs-callout">
+          <strong>Overview</strong>
+          <p>Built with clean HTML, modular CSS, and lightweight JavaScript. Fully responsive with dark mode and RTL support.</p>
+        </div>
+        <ul class="docs-list">
+          <li>Premium home, service, and dashboard layouts</li>
+          <li>Reusable components (cards, buttons, badges)</li>
+          <li>Modern interactions and accessibility-friendly defaults</li>
+          <li>Dark mode and RTL support baked in</li>
+        </ul>
+      </section>
+
+      <section class="docs-section" id="getting-started">
+        <h2>Getting Started</h2>
+        <div class="docs-grid">
+          <div class="docs-card">
+            <h3>Requirements</h3>
+            <ul>
+              <li>Modern browser (Chrome, Edge, Safari)</li>
+              <li>Local server (optional but recommended)</li>
+              <li>Basic HTML/CSS knowledge</li>
+            </ul>
+          </div>
+          <div class="docs-card">
+            <h3>Quick Start</h3>
+            <ol>
+              <li>Unzip the template folder</li>
+              <li>Open `pages/index.html` in a browser</li>
+              <li>Edit content and replace images</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="docs-section" id="installation">
+        <h2>Installation</h2>
+        <p>You can run the template locally or deploy it to any static hosting platform.</p>
+        <div class="docs-steps">
+          <div class="docs-step">
+            <span>Local Preview</span>
+            <p>Open `pages/index.html` directly, or run a local server for best results.</p>
+          </div>
+          <div class="docs-step">
+            <span>Deploy</span>
+            <p>Upload the full folder to Netlify, Vercel, or any static hosting provider.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="docs-section" id="folder-structure">
+        <h2>Folder Structure</h2>
+        <div class="code-block">
+          <button class="copy-btn" type="button" data-copy-target="code-structure">Copy</button>
+          <pre><code id="code-structure">Pet Sitting &amp; Dog Walking Service/
+  assets/
+    css/
+      style.css
+      dark-mode.css
+      rtl.css
+    js/
+      main.js
+      dashboard.js
+    images/
+  pages/
+    index.html
+    services.html
+    login.html
+    register.html
+    clientdashboard.html
+    admindashboard.html
+  documentation/
+    index.html</code></pre>
+        </div>
+      </section>
+
+      <section class="docs-section" id="html-structure">
+        <h2>HTML Structure</h2>
+        <p>Pages use a simple layout: header, main content, and footer. Sections follow a consistent grid and spacing system.</p>
+        <div class="code-block">
+          <button class="copy-btn" type="button" data-copy-target="code-html">Copy</button>
+          <pre><code id="code-html">&lt;body&gt;
+  &lt;header class="site-header"&gt;...&lt;/header&gt;
+  &lt;main class="page"&gt;
+    &lt;section class="home-hero"&gt;...&lt;/section&gt;
+  &lt;/main&gt;
+  &lt;footer class="site-footer"&gt;...&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+        </div>
+      </section>
+
+      <section class="docs-section" id="css-structure">
+        <h2>CSS Structure</h2>
+        <p>Global styles and variables live in `assets/css/style.css`. Dark mode and RTL overrides live in dedicated files.</p>
+        <div class="code-block">
+          <button class="copy-btn" type="button" data-copy-target="code-css">Copy</button>
+          <pre><code id="code-css">:root {
+  --primary-color: #3a8d8c;
+  --secondary-color: #1b2b34;
+  --accent-color: #f4c86b;
+  --border-radius: 16px;
+  --space-1: 8px;
+  --space-2: 16px;
+}</code></pre>
+        </div>
+        <div class="docs-callout">
+          <strong>Tip</strong>
+          <p>Update colors in `:root` to reskin the entire template in minutes.</p>
+        </div>
+      </section>
+
+      <section class="docs-section" id="javascript-guide">
+        <h2>JavaScript Guide</h2>
+        <p>Core interactions live in `assets/js/main.js`. Dashboard interactions live in `assets/js/dashboard.js`.</p>
+        <div class="code-block">
+          <button class="copy-btn" type="button" data-copy-target="code-js">Copy</button>
+          <pre><code id="code-js">const themeToggle = document.getElementById("themeToggle");
+const rtlToggle = document.getElementById("rtlToggle");
+
+// Example: toggle a class
+document.body.classList.toggle("dark-mode");</code></pre>
+        </div>
+      </section>
+
+      <section class="docs-section" id="components">
+        <h2>Components</h2>
+        <div class="docs-grid">
+          <div class="docs-card">
+            <h3>Buttons</h3>
+            <p>Use `btn`, `btn-primary`, and `btn-outline` for CTAs and secondary actions.</p>
+          </div>
+          <div class="docs-card">
+            <h3>Cards</h3>
+            <p>Cards like `service-card`, `dashboard-card`, and `sitter-card` are reusable.</p>
+          </div>
+          <div class="docs-card">
+            <h3>Navigation</h3>
+            <p>`site-header`, `nav`, and `dropdown` provide a premium menu system.</p>
+          </div>
+          <div class="docs-card">
+            <h3>Badges</h3>
+            <p>Use pill badges like `status-pill` and `home-hero-pill` for highlights.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="docs-section" id="pages-overview">
+        <h2>Pages Overview</h2>
+        <div class="docs-grid">
+          <div class="docs-card">
+            <h3>Home</h3>
+            <p>Premium hero, trust signals, services, and testimonials.</p>
+          </div>
+          <div class="docs-card">
+            <h3>Services</h3>
+            <p>Dedicated pages for walking, sitting, and overnight care.</p>
+          </div>
+          <div class="docs-card">
+            <h3>Dashboard</h3>
+            <p>Client and admin dashboards with cards, charts, and tables.</p>
+          </div>
+          <div class="docs-card">
+            <h3>Contact</h3>
+            <p>Beautiful contact form and map section.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="docs-section" id="customization">
+        <h2>Customization</h2>
+        <ul class="docs-list">
+          <li>Update brand colors in `:root`</li>
+          <li>Swap fonts in the Google Fonts link</li>
+          <li>Edit hero copy and CTA text in HTML</li>
+          <li>Replace images in `assets/images/`</li>
+        </ul>
+      </section>
+
+      <section class="docs-section" id="dashboard-usage">
+        <h2>Dashboard Usage</h2>
+        <p>Dashboards include charts and data cards built with HTML + CSS + SVG.</p>
+        <div class="docs-callout">
+          <strong>Tip</strong>
+          <p>Update chart values by editing SVG path coordinates and label text.</p>
+        </div>
+      </section>
+
+      <section class="docs-section" id="api-integration">
+        <h2>API / Integration</h2>
+        <p>The template is static by default. Integrate with your backend by wiring form actions to your API endpoints or serverless functions.</p>
+        <ul class="docs-list">
+          <li>Connect booking forms to your database</li>
+          <li>Replace static counts with API responses</li>
+          <li>Integrate email tools for newsletters</li>
+        </ul>
+      </section>
+
+      <section class="docs-section" id="faq">
+        <h2>FAQ</h2>
+        <div class="docs-faq">
+          <div class="docs-faq-item">
+            <h3>Do I need a build tool?</h3>
+            <p>No. The template runs as plain HTML/CSS/JS.</p>
+          </div>
+          <div class="docs-faq-item">
+            <h3>How do I enable dark mode?</h3>
+            <p>Click the moon icon in the header to toggle dark mode.</p>
+          </div>
+          <div class="docs-faq-item">
+            <h3>Can I translate the site?</h3>
+            <p>Yes. Replace copy in the HTML files and enable RTL if needed.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="docs-section" id="support">
+        <h2>Support</h2>
+        <div class="docs-callout">
+          <strong>Need help?</strong>
+          <p>Email us at <a class="docs-link" href="mailto:hello@pawcare.com">hello@pawcare.com</a> for support or customizations.</p>
+        </div>
+      </section>
+
+      <section class="docs-section" id="changelog">
+        <h2>Changelog</h2>
+        <div class="docs-timeline">
+          <div class="docs-timeline-item">
+            <span>v1.1.0</span>
+            <p>Added premium auth, 404, and coming soon pages.</p>
+          </div>
+          <div class="docs-timeline-item">
+            <span>v1.0.0</span>
+            <p>Initial template release with core pages and dashboards.</p>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    (() => {
+      const docBody = document.body;
+      const menuToggle = document.getElementById("docsMenuToggle");
+      const docsOverlay = document.getElementById("docsOverlay");
+      const navLinks = document.querySelectorAll(".docs-nav-link");
+
+      const closeMenu = () => {
+        docBody.classList.remove("docs-nav-open");
+        if (menuToggle) {
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+        if (docsOverlay) {
+          docsOverlay.setAttribute("aria-hidden", "true");
+        }
+      };
+
+      if (menuToggle) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = docBody.classList.toggle("docs-nav-open");
+          menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          if (docsOverlay) {
+            docsOverlay.setAttribute("aria-hidden", isOpen ? "false" : "true");
+          }
+        });
+      }
+
+      if (docsOverlay) {
+        docsOverlay.addEventListener("click", closeMenu);
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 980) {
+            closeMenu();
+          }
+        });
+      });
+
+      const copyButtons = document.querySelectorAll("[data-copy-target]");
+      copyButtons.forEach((button) => {
+        const targetId = button.dataset.copyTarget;
+        const codeEl = document.getElementById(targetId);
+        if (!codeEl) return;
+        button.addEventListener("click", async () => {
+          const text = codeEl.innerText;
+          try {
+            await navigator.clipboard.writeText(text);
+          } catch (error) {
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            textarea.style.position = "fixed";
+            textarea.style.opacity = "0";
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+          }
+          const original = button.textContent;
+          button.textContent = "Copied";
+          button.classList.add("is-copied");
+          window.setTimeout(() => {
+            button.textContent = original;
+            button.classList.remove("is-copied");
+          }, 1600);
+        });
+      });
+
+      const sections = document.querySelectorAll(".docs-section");
+      if ("IntersectionObserver" in window && sections.length) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              navLinks.forEach((link) => link.classList.remove("is-active"));
+              const activeLink = document.querySelector(`.docs-nav-link[href="#${entry.target.id}"]`);
+              if (activeLink) activeLink.classList.add("is-active");
+            });
+          },
+          { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+        );
+        sections.forEach((section) => observer.observe(section));
+      }
+    })();
+  </script>
+</body>
+</html>

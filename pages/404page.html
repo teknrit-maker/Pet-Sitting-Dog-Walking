@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Page not found on Pawcare.">
+  <title>Pawcare | 404</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="error-body">
+  <main class="error-page">
+    <div class="auth-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+      <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
+        <i class="fa-solid fa-align-right"></i>
+      </button>
+    </div>
+
+    <div class="error-shell">
+      <section class="error-content">
+        <a class="brand" href="index.html" aria-label="Pawcare home">
+          <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+          <span class="brand-text">Pawcare</span>
+        </a>
+
+        <span class="error-code">404</span>
+        <h1 class="error-title">Oops! Page not found</h1>
+        <p class="error-text">The page you're looking for doesn't exist or has been moved.</p>
+
+        <div class="error-actions">
+          <a class="btn btn-primary" href="index.html">Go Home</a>
+          <button class="btn btn-outline" id="backButton" type="button">Back</button>
+        </div>
+      </section>
+
+      <section class="error-visual" aria-label="Lost pet illustration">
+        <div class="error-orb"></div>
+        <img class="error-illustration" src="../assets/images/happydog.avif" alt="Happy pets illustration">
+        <div class="error-caption">We'll help you find your way back to caring for your pet.</div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    const backButton = document.getElementById("backButton");
+    if (backButton) {
+      backButton.addEventListener("click", () => history.back());
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pawcare provides trusted pet sitting, dog walking, and overnight care with seamless booking and real-time updates.">
+  <title>Pawcare | Pet Sitting & Dog Walking Service</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pawcare home">
+        <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+        <span class="brand-text">Pawcare</span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Home
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="index.html">Homepage 1</a>
+              <a class="dropdown-link" href="homepage-2.html">Homepage 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Services
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="Dogwalking.html">Dog Walking</a>
+              <a class="dropdown-link" href="pet sitting.html">Pet Sitting</a>
+              <a class="dropdown-link" href="overnight.html">Overnight Care</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="pet-tips.html">Pet Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Dashboard
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="clientdashboard.html">Client Dashboard</a>
+              <a class="dropdown-link" href="admindashboard.html">Admin Dashboard</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
+          <i class="fa-solid fa-align-right"></i>
+        </button>
+        <a class="btn btn-outline" href="login.html">Login</a>
+        <a class="btn btn-primary" href="contact.html">Book Now</a>
+        <button class="hamburger" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <section class="pricing-hero section" id="pricing-hero">
+  <div class="pricing-hero-bg">
+    <img src="../assets/images/pricing-hero-bg.avif" alt="Pet care">
+  </div>
+
+  <div class="container pricing-hero-content" data-reveal>
+
+    <span class="hero-eyebrow">Pricing</span>
+
+    <h1 class="pricing-hero-title">
+      Simple, transparent pricing for every pet
+    </h1>
+
+    <p class="pricing-hero-text">
+      No hidden fees. Flexible plans designed to give your pet the care they deserve.
+    </p>
+
+  </div>
+</section>
+<section class="pricing-tabs section" id="pricing-tabs">
+  <div class="container">
+
+    <!-- TABS -->
+    <div class="tabs-nav" data-reveal>
+      <button class="tab-btn active" data-tab="dog">Dog Walking</button>
+      <button class="tab-btn" data-tab="sitting">Pet Sitting</button>
+      <button class="tab-btn" data-tab="overnight">Overnight Care</button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="tabs-content">
+
+      <!-- DOG WALKING -->
+      <div class="tab-panel active" id="dog">
+        <div class="service-pricing-grid">
+          <article class="service-pricing-card" data-reveal>
+            <h3>Basic</h3>
+            <p class="service-price">$29<span>/walk</span></p>
+            <ul class="service-features">
+              <li>30-minute walk</li>
+              <li>Photo update</li>
+              <li>Standard support</li>
+            </ul>
+            <a class="btn btn-outline" href="contact.html">Book Now</a>
+          </article>
+
+          <article class="service-pricing-card featured" data-reveal data-delay="1">
+            <span class="service-pricing-badge">Most Popular</span>
+            <h3>Standard</h3>
+            <p class="service-price">$49<span>/walk</span></p>
+            <ul class="service-features">
+              <li>45-minute walk</li>
+              <li>Live GPS + photos</li>
+              <li>Priority scheduling</li>
+            </ul>
+            <a class="btn btn-primary" href="contact.html">Book Now</a>
+          </article>
+
+          <article class="service-pricing-card" data-reveal data-delay="2">
+            <h3>Premium</h3>
+            <p class="service-price">$79<span>/walk</span></p>
+            <ul class="service-features">
+              <li>60-minute adventure</li>
+              <li>Route customization</li>
+              <li>Concierge support</li>
+            </ul>
+            <a class="btn btn-outline" href="contact.html">Book Now</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- PET SITTING -->
+      <div class="tab-panel" id="sitting">
+        <div class="service-pricing-grid">
+          <article class="service-pricing-card" data-reveal>
+            <h3>Basic</h3>
+            <p class="service-price">$35<span>/day</span></p>
+            <ul class="service-features">
+              <li>Two daily visits</li>
+              <li>Feeding + playtime</li>
+              <li>Standard updates</li>
+            </ul>
+            <a class="btn btn-outline" href="contact.html">Book Now</a>
+          </article>
+
+          <article class="service-pricing-card featured" data-reveal data-delay="1">
+            <span class="service-pricing-badge">Most Popular</span>
+            <h3>Standard</h3>
+            <p class="service-price">$55<span>/day</span></p>
+            <ul class="service-features">
+              <li>Three daily visits</li>
+              <li>Photo + video updates</li>
+              <li>Medication support</li>
+            </ul>
+            <a class="btn btn-primary" href="contact.html">Book Now</a>
+          </article>
+
+          <article class="service-pricing-card" data-reveal data-delay="2">
+            <h3>Premium</h3>
+            <p class="service-price">$85<span>/day</span></p>
+            <ul class="service-features">
+              <li>Full-day companionship</li>
+              <li>Custom routines</li>
+              <li>Concierge support</li>
+            </ul>
+            <a class="btn btn-outline" href="contact.html">Book Now</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- OVERNIGHT -->
+      <div class="tab-panel" id="overnight">
+        <div class="service-pricing-grid">
+          <article class="service-pricing-card" data-reveal>
+            <h3>Basic</h3>
+            <p class="service-price">$70<span>/night</span></p>
+            <ul class="service-features">
+              <li>Overnight supervision</li>
+              <li>Evening + morning care</li>
+              <li>Standard updates</li>
+            </ul>
+            <a class="btn btn-outline" href="contact.html">Book Now</a>
+          </article>
+
+          <article class="service-pricing-card featured" data-reveal data-delay="1">
+            <span class="service-pricing-badge">Most Popular</span>
+            <h3>Standard</h3>
+            <p class="service-price">$95<span>/night</span></p>
+            <ul class="service-features">
+              <li>Bedtime routine support</li>
+              <li>Live photo updates</li>
+              <li>Priority sitter match</li>
+            </ul>
+            <a class="btn btn-primary" href="contact.html">Book Now</a>
+          </article>
+
+          <article class="service-pricing-card" data-reveal data-delay="2">
+            <h3>Premium</h3>
+            <p class="service-price">$130<span>/night</span></p>
+            <ul class="service-features">
+              <li>Extended overnight care</li>
+              <li>Morning enrichment walk</li>
+              <li>Concierge support</li>
+            </ul>
+            <a class="btn btn-outline" href="contact.html">Book Now</a>
+          </article>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="pricing-compare section" id="pricing-compare">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="section-eyebrow">Compare Plans</span>
+      <h2 class="section-title">Find the right level of care.</h2>
+      <p class="section-subtitle">Clear, side-by-side details for confident choices.</p>
+    </div>
+
+    <div class="compare-table" data-reveal>
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Basic</th>
+            <th>Standard</th>
+            <th>Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Duration</td>
+            <td>30 min</td>
+            <td>45 min</td>
+            <td>60 min</td>
+          </tr>
+          <tr>
+            <td>Updates</td>
+            <td>Photo</td>
+            <td>Photo + GPS</td>
+            <td>Photo + GPS + Notes</td>
+          </tr>
+          <tr>
+            <td>Supervision</td>
+            <td>Standard</td>
+            <td>Enhanced</td>
+            <td>Concierge</td>
+          </tr>
+          <tr>
+            <td>Support</td>
+            <td>Business hours</td>
+            <td>Priority</td>
+            <td>24/7</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="pricing-faq section" id="pricing-faq">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="section-eyebrow">FAQ</span>
+      <h2 class="section-title">Answers to common questions.</h2>
+      <p class="section-subtitle">Everything you need to know before booking.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" data-reveal>
+        <summary>What is included in pricing?</summary>
+        <p>Each plan includes care, updates, and support. Select a tier based on duration and update frequency.</p>
+      </details>
+      <details class="faq-item" data-reveal>
+        <summary>Can I cancel anytime?</summary>
+        <p>Yes. You can reschedule or cancel bookings directly from your dashboard with clear policies.</p>
+      </details>
+      <details class="faq-item" data-reveal>
+        <summary>Are sitters verified?</summary>
+        <p>All sitters are background-checked and reviewed before they are approved to care for pets.</p>
+      </details>
+      <details class="faq-item" data-reveal>
+        <summary>Do I get updates?</summary>
+        <p>Absolutely. Every visit includes notes and photos, with GPS tracking on Standard and Premium.</p>
+      </details>
+    </div>
+  </div>
+</section>
+  </main>
+    <footer class="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Pawcare home">
+            <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+            <span class="brand-text">Pawcare</span>
+          </a>
+          <p>Premium pet care with real-time updates, trusted sitters, and services designed around your pet's comfort.</p>
+          <span class="footer-trust">Trusted by 10K+ pet parents</span>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="pet-tips.html">Pet Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="Dogwalking.html">Dog Walking</a></li>
+            <li><a href="pet sitting.html">Pet Sitting</a></li>
+            <li><a href="services.html#overnight-care">Overnight Care</a></li>
+            <li><a href="services.html">All Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+            <li><a href="mailto:hello@pawcare.com">hello@pawcare.com</a></li>
+            <li>Mon-Sun: 7am-9pm</li>
+            <li>Serving NYC & nearby</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>(c) 2026 Pawcare. All rights reserved.</span>
+        <span>Privacy | Terms</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
+

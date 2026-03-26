@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Dog walker">
+  <defs>
+    <linearGradient id="bgDog" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f7f7e"/>
+      <stop offset="100%" stop-color="#b8efe4"/>
+    </linearGradient>
+    <linearGradient id="glowDog" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="40" fill="url(#bgDog)"/>
+  <circle cx="620" cy="120" r="130" fill="url(#glowDog)"/>
+  <circle cx="160" cy="460" r="180" fill="rgba(255,255,255,0.12)"/>
+  <g fill="#ffffff" opacity="0.92">
+    <circle cx="280" cy="220" r="28"/>
+    <circle cx="360" cy="210" r="26"/>
+    <circle cx="250" cy="300" r="24"/>
+    <circle cx="390" cy="300" r="24"/>
+    <path d="M320 240c-40 0-72 34-72 74 0 44 41 74 72 74s72-30 72-74c0-40-32-74-72-74z"/>
+  </g>
+  <text x="60" y="520" fill="#ffffff" font-size="32" font-family="Poppins, sans-serif" font-weight="600" letter-spacing="1">Dog Walker</text>
+</svg>

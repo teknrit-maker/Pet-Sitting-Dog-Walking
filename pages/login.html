@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Login to Pawcare to manage bookings, updates, and premium pet care.">
+  <title>Pawcare | Login</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="auth-body">
+  <main class="auth-page">
+    <div class="auth-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+      <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
+        <i class="fa-solid fa-align-right"></i>
+      </button>
+    </div>
+
+    <div class="auth-shell">
+      <section class="auth-visual" aria-label="Pawcare premium care">
+        <img src="../assets/images/petlove.avif" alt="Pet owner smiling with a dog">
+        <div class="auth-visual-card">
+          <span class="auth-kicker">Premium Care Platform</span>
+          <h2>Trusted sitters. Seamless bookings.</h2>
+          <p>Luxury-level pet care with real-time updates and verified professionals for every visit.</p>
+          <div class="auth-metrics">
+            <div class="auth-metric">
+              <strong>4.9/5</strong>
+              <span>Parent rating</span>
+            </div>
+            <div class="auth-metric">
+              <strong>10k+</strong>
+              <span>Happy pets</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="auth-panel">
+        <div class="auth-card">
+          <a class="brand" href="index.html" aria-label="Pawcare home">
+            <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+            <span class="brand-text">Pawcare</span>
+          </a>
+
+          <div class="auth-heading">
+            <h1 class="auth-title">Welcome Back</h1>
+            <p class="auth-subtitle">Login to manage your bookings and pet care</p>
+          </div>
+
+          <form class="auth-form" action="#" method="post">
+            <label class="form-field">
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@pawcare.com" autocomplete="email" required>
+            </label>
+
+            <label class="form-field">
+              <span>Password</span>
+              <input type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+            </label>
+
+            <div class="auth-options">
+              <label class="auth-remember">
+                <input type="checkbox" name="remember" checked>
+                <span>Remember me</span>
+              </label>
+              <a class="auth-link" href="comingsoon.html">Forgot password?</a>
+            </div>
+
+            <button class="btn btn-primary auth-submit" type="submit">Login</button>
+
+            <div class="auth-divider">
+              <span>or</span>
+            </div>
+
+            <button class="btn btn-outline auth-google" type="button" aria-label="Continue with Google">
+              <i class="fa-brands fa-google"></i>
+              Continue with Google
+            </button>
+          </form>
+
+          <p class="auth-footer">
+            Don't have an account? <a class="auth-link" href="register.html">Sign up</a>
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

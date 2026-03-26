@@ -1,0 +1,706 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Client dashboard for Pawcare bookings, pets, and messages.">
+  <title>Pawcare | Client Dashboard</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="dashboard-body">
+  <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Client dashboard menu">
+    <div class="dashboard-sidebar-header">
+      <span class="sidebar-kicker">Client Menu</span>
+      <p class="sidebar-subtitle">Your care hub</p>
+    </div>
+
+    <nav class="dashboard-nav" aria-label="Dashboard navigation">
+      <button class="dashboard-link is-active" type="button" data-panel="dashboard" aria-controls="panel-dashboard" aria-selected="true">
+        <span class="link-icon"><i class="fa-solid fa-chart-pie"></i></span>
+        Dashboard
+      </button>
+      <button class="dashboard-link" type="button" data-panel="bookings" aria-controls="panel-bookings" aria-selected="false">
+        <span class="link-icon"><i class="fa-regular fa-calendar-check"></i></span>
+        My Bookings
+      </button>
+      <button class="dashboard-link" type="button" data-panel="pets" aria-controls="panel-pets" aria-selected="false">
+        <span class="link-icon"><i class="fa-solid fa-paw"></i></span>
+        My Pets
+      </button>
+      <button class="dashboard-link" type="button" data-panel="messages" aria-controls="panel-messages" aria-selected="false">
+        <span class="link-icon"><i class="fa-regular fa-comments"></i></span>
+        Messages
+      </button>
+      <button class="dashboard-link" type="button" data-panel="payments" aria-controls="panel-payments" aria-selected="false">
+        <span class="link-icon"><i class="fa-regular fa-credit-card"></i></span>
+        Payments
+      </button>
+      <button class="dashboard-link" type="button" data-panel="settings" aria-controls="panel-settings" aria-selected="false">
+        <span class="link-icon"><i class="fa-solid fa-gear"></i></span>
+        Settings
+      </button>
+    </nav>
+
+    <div class="sidebar-support">
+      <div class="dashboard-card support-card">
+        <span class="support-title">Need help?</span>
+        <p>Chat with your coordinator or book a new visit in seconds.</p>
+        <button class="btn btn-primary" type="button">Book a Service</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dashboard-overlay" id="dashboardOverlay" aria-hidden="true"></div>
+
+  <div class="dashboard-shell">
+    <header class="dashboard-header" id="dashboardHeader">
+      <div class="dashboard-header-left">
+        <a class="brand" href="index.html" aria-label="Pawcare home">
+          <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+          <span class="brand-text">Pawcare</span>
+        </a>
+      </div>
+
+      <div class="dashboard-header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
+          <i class="fa-solid fa-align-right"></i>
+        </button>
+        <button class="icon-btn dashboard-notification" type="button" aria-label="Notifications">
+          <i class="fa-regular fa-bell"></i>
+          <span class="notify-badge">3</span>
+        </button>
+        <div class="dashboard-profile" id="profileMenu">
+          <button class="profile-trigger" id="profileToggle" type="button" aria-haspopup="true" aria-expanded="false">
+            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=60" alt="Profile avatar" class="profile-avatar">
+            <span class="profile-name">Jordan</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="profile-dropdown" role="menu" aria-label="Profile menu">
+            <button class="dropdown-item" type="button">Profile</button>
+            <button class="dropdown-item" type="button">Settings</button>
+            <button class="dropdown-item" type="button">Logout</button>
+          </div>
+        </div>
+        <button class="dashboard-hamburger" id="dashboardToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <section class="dashboard-panel is-active" id="panel-dashboard" data-panel="dashboard" aria-hidden="false">
+        <div class="dashboard-page-header">
+          <div>
+            <span class="dashboard-kicker">Client Dashboard</span>
+            <h1>Welcome back, Jordan.</h1>
+            <p>Here is a quick snapshot of your bookings, sitters, and updates.</p>
+          </div>
+          <div class="dashboard-page-actions">
+            <button class="btn btn-primary" type="button">Book a Service</button>
+            <button class="btn btn-outline" type="button">Message Sitter</button>
+          </div>
+        </div>
+
+        <div class="dashboard-stats">
+          <article class="dashboard-card stat-card">
+            <div class="stat-icon"><i class="fa-regular fa-calendar"></i></div>
+            <div>
+              <span class="stat-label">Total bookings</span>
+              <strong class="stat-value">128</strong>
+            </div>
+          </article>
+          <article class="dashboard-card stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-person-walking"></i></div>
+            <div>
+              <span class="stat-label">Upcoming walks</span>
+              <strong class="stat-value">6</strong>
+            </div>
+          </article>
+          <article class="dashboard-card stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-shield-dog"></i></div>
+            <div>
+              <span class="stat-label">Active sitters</span>
+              <strong class="stat-value">3</strong>
+            </div>
+          </article>
+          <article class="dashboard-card stat-card">
+            <div class="stat-icon"><i class="fa-regular fa-credit-card"></i></div>
+            <div>
+              <span class="stat-label">Payments</span>
+              <strong class="stat-value">$248</strong>
+            </div>
+          </article>
+        </div>
+
+        <div class="dashboard-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Bookings Over Time</h2>
+              <span class="chart-meta">Last 6 months</span>
+            </div>
+            <div class="chart-body">
+              <svg class="line-chart" viewBox="0 0 360 160" role="img" aria-label="Bookings over time line chart">
+                <g class="chart-grid">
+                  <line x1="0" y1="20" x2="360" y2="20"></line>
+                  <line x1="0" y1="60" x2="360" y2="60"></line>
+                  <line x1="0" y1="100" x2="360" y2="100"></line>
+                  <line x1="0" y1="140" x2="360" y2="140"></line>
+                </g>
+                <path class="chart-area" d="M10 120 L70 92 L130 110 L190 70 L250 86 L310 48 L350 62 L350 150 L10 150 Z"></path>
+                <path class="chart-line" d="M10 120 L70 92 L130 110 L190 70 L250 86 L310 48 L350 62"></path>
+                <g class="chart-points">
+                  <circle cx="10" cy="120" r="4"></circle>
+                  <circle cx="70" cy="92" r="4"></circle>
+                  <circle cx="130" cy="110" r="4"></circle>
+                  <circle cx="190" cy="70" r="4"></circle>
+                  <circle cx="250" cy="86" r="4"></circle>
+                  <circle cx="310" cy="48" r="4"></circle>
+                  <circle cx="350" cy="62" r="4"></circle>
+                </g>
+              </svg>
+              <div class="chart-labels">
+                <span>Oct</span>
+                <span>Nov</span>
+                <span>Dec</span>
+                <span>Jan</span>
+                <span>Feb</span>
+                <span>Mar</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Services Usage</h2>
+              <span class="chart-meta">Last 30 days</span>
+            </div>
+            <div class="chart-body">
+              <svg class="bar-chart" viewBox="0 0 360 160" role="img" aria-label="Services usage bar chart">
+                <g class="chart-grid">
+                  <line x1="0" y1="140" x2="360" y2="140"></line>
+                </g>
+                <rect class="chart-bar" x="30" y="50" width="50" height="90" rx="10"></rect>
+                <rect class="chart-bar" x="110" y="70" width="50" height="70" rx="10"></rect>
+                <rect class="chart-bar" x="190" y="30" width="50" height="110" rx="10"></rect>
+                <rect class="chart-bar" x="270" y="85" width="50" height="55" rx="10"></rect>
+              </svg>
+              <div class="chart-labels">
+                <span>Walks</span>
+                <span>Drop-ins</span>
+                <span>Overnight</span>
+                <span>Grooming</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-activity">
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h2>Latest Bookings</h2>
+              <button class="btn btn-ghost btn-small" type="button">View all</button>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div>
+                  <strong>Morning Walk</strong>
+                  <span>Apr 12 · 8:00 AM</span>
+                </div>
+                <span class="status-pill status-confirmed">Confirmed</span>
+              </div>
+              <div class="activity-item">
+                <div>
+                  <strong>Evening Drop-in</strong>
+                  <span>Apr 13 · 6:30 PM</span>
+                </div>
+                <span class="status-pill status-pending">Pending</span>
+              </div>
+              <div class="activity-item">
+                <div>
+                  <strong>Overnight Stay</strong>
+                  <span>Apr 18 · 7:00 PM</span>
+                </div>
+                <span class="status-pill status-confirmed">Confirmed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h2>Recent Updates</h2>
+              <button class="btn btn-ghost btn-small" type="button">Open inbox</button>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div>
+                  <strong>Amelia R.</strong>
+                  <span>Shared live walk photos for Milo.</span>
+                </div>
+                <span class="activity-time">10 min ago</span>
+              </div>
+              <div class="activity-item">
+                <div>
+                  <strong>Pawcare Team</strong>
+                  <span>Your April invoice is ready.</span>
+                </div>
+                <span class="activity-time">2 hrs ago</span>
+              </div>
+              <div class="activity-item">
+                <div>
+                  <strong>Leo K.</strong>
+                  <span>Confirmed pickup instructions.</span>
+                </div>
+                <span class="activity-time">Yesterday</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-panel" id="panel-bookings" data-panel="bookings" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <h1>My Bookings</h1>
+            <p>Track visits, check-in times, and sitter notes.</p>
+          </div>
+          <div class="dashboard-filters">
+            <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+            <button class="filter-chip" type="button" data-filter="upcoming">Upcoming</button>
+            <button class="filter-chip" type="button" data-filter="completed">Completed</button>
+            <button class="filter-chip" type="button" data-filter="pending">Pending</button>
+          </div>
+        </div>
+
+        <div class="booking-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Booking Volume</h2>
+              <span class="chart-meta">Last 8 weeks</span>
+            </div>
+            <div class="chart-body">
+              <svg class="line-chart" viewBox="0 0 360 160" role="img" aria-label="Bookings per week line chart">
+                <g class="chart-grid">
+                  <line x1="0" y1="20" x2="360" y2="20"></line>
+                  <line x1="0" y1="60" x2="360" y2="60"></line>
+                  <line x1="0" y1="100" x2="360" y2="100"></line>
+                  <line x1="0" y1="140" x2="360" y2="140"></line>
+                </g>
+                <path class="chart-area" d="M10 120 L55 98 L100 110 L145 72 L190 84 L235 64 L280 54 L330 70 L350 60 L350 150 L10 150 Z"></path>
+                <path class="chart-line" d="M10 120 L55 98 L100 110 L145 72 L190 84 L235 64 L280 54 L330 70 L350 60"></path>
+                <g class="chart-points">
+                  <circle cx="10" cy="120" r="4"></circle>
+                  <circle cx="55" cy="98" r="4"></circle>
+                  <circle cx="100" cy="110" r="4"></circle>
+                  <circle cx="145" cy="72" r="4"></circle>
+                  <circle cx="190" cy="84" r="4"></circle>
+                  <circle cx="235" cy="64" r="4"></circle>
+                  <circle cx="280" cy="54" r="4"></circle>
+                  <circle cx="330" cy="70" r="4"></circle>
+                  <circle cx="350" cy="60" r="4"></circle>
+                </g>
+              </svg>
+              <div class="chart-labels">
+                <span>W1</span>
+                <span>W2</span>
+                <span>W3</span>
+                <span>W4</span>
+                <span>W5</span>
+                <span>W6</span>
+                <span>W7</span>
+                <span>W8</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Booking Status</h2>
+              <span class="chart-meta">Current mix</span>
+            </div>
+            <div class="chart-body pie-chart-body">
+              <svg class="pie-chart" viewBox="0 0 160 160" role="img" aria-label="Booking status pie chart">
+                <circle class="pie-ring" cx="80" cy="80" r="52"></circle>
+                <circle class="pie-slice pie-slice--primary" cx="80" cy="80" r="52" stroke-dasharray="163.4 326.7" stroke-dashoffset="0"></circle>
+                <circle class="pie-slice pie-slice--accent" cx="80" cy="80" r="52" stroke-dasharray="98.0 326.7" stroke-dashoffset="-163.4"></circle>
+                <circle class="pie-slice pie-slice--muted" cx="80" cy="80" r="52" stroke-dasharray="65.3 326.7" stroke-dashoffset="-261.4"></circle>
+                <text x="80" y="78" text-anchor="middle" class="pie-center">68%</text>
+                <text x="80" y="96" text-anchor="middle" class="pie-sub">Confirmed</text>
+              </svg>
+              <div class="pie-legend">
+                <span><i class="legend-dot legend-confirmed"></i>Confirmed 68%</span>
+                <span><i class="legend-dot legend-pending"></i>Pending 20%</span>
+                <span><i class="legend-dot legend-completed"></i>Completed 12%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="booking-table">
+            <div class="booking-row booking-head">
+              <span>Date</span>
+              <span>Service</span>
+              <span>Status</span>
+              <span>Actions</span>
+            </div>
+            <div class="booking-row" data-status="upcoming">
+              <span>Apr 12, 8:00 AM</span>
+              <span>Morning Walk</span>
+              <span class="status-pill status-confirmed">Confirmed</span>
+              <button class="btn btn-ghost btn-small" type="button">View details</button>
+            </div>
+            <div class="booking-row" data-status="pending">
+              <span>Apr 13, 6:30 PM</span>
+              <span>Evening Drop-in</span>
+              <span class="status-pill status-pending">Pending</span>
+              <button class="btn btn-ghost btn-small" type="button">View details</button>
+            </div>
+            <div class="booking-row" data-status="completed">
+              <span>Mar 28, 7:00 PM</span>
+              <span>Overnight Stay</span>
+              <span class="status-pill status-completed">Completed</span>
+              <button class="btn btn-ghost btn-small" type="button">View details</button>
+            </div>
+            <div class="booking-row" data-status="upcoming">
+              <span>Apr 21, 9:00 AM</span>
+              <span>Weekend Playtime</span>
+              <span class="status-pill status-upcoming">Scheduled</span>
+              <button class="btn btn-ghost btn-small" type="button">View details</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-panel" id="panel-pets" data-panel="pets" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <h1>My Pets</h1>
+            <p>Profiles, routines, and care notes for your companions.</p>
+          </div>
+          <button class="btn btn-primary" type="button">Add Pet</button>
+        </div>
+
+        <div class="pet-grid">
+          <article class="dashboard-card pet-card">
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=400&q=60" alt="Dog named Milo" class="pet-photo">
+            <div class="pet-info">
+              <div class="pet-title">
+                <h3>Milo</h3>
+                <button class="btn btn-ghost btn-small" type="button">Edit</button>
+              </div>
+              <span class="pet-meta">Golden Retriever · 4 yrs</span>
+              <p>Morning walk at 8am, peanut butter treats only.</p>
+            </div>
+          </article>
+          <article class="dashboard-card pet-card">
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=400&q=60" alt="Cat named Luna" class="pet-photo">
+            <div class="pet-info">
+              <div class="pet-title">
+                <h3>Luna</h3>
+                <button class="btn btn-ghost btn-small" type="button">Edit</button>
+              </div>
+              <span class="pet-meta">British Shorthair · 2 yrs</span>
+              <p>Evening feed at 7pm, loves gentle brushing.</p>
+            </div>
+          </article>
+          <article class="dashboard-card pet-card">
+            <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=400&q=60" alt="Dog named Pepper" class="pet-photo">
+            <div class="pet-info">
+              <div class="pet-title">
+                <h3>Pepper</h3>
+                <button class="btn btn-ghost btn-small" type="button">Edit</button>
+              </div>
+              <span class="pet-meta">French Bulldog · 3 yrs</span>
+              <p>Short walks only, carries favorite toy outdoors.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="dashboard-panel" id="panel-messages" data-panel="messages" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <h1>Messages</h1>
+            <p>Stay in sync with your sitters and the Pawcare team.</p>
+          </div>
+          <button class="btn btn-outline" type="button">New Message</button>
+        </div>
+
+        <div class="messages-layout">
+          <div class="dashboard-card chat-list">
+            <div class="chat-list-header">
+              <h2>Chats</h2>
+              <button class="btn btn-ghost btn-small" type="button">Filter</button>
+            </div>
+            <div class="chat-item is-active">
+              <div class="chat-avatar">AR</div>
+              <div class="chat-info">
+                <strong>Amelia R.</strong>
+                <span>Central Park Walk</span>
+              </div>
+              <span class="chat-time">9:12 AM</span>
+            </div>
+            <div class="chat-item">
+              <div class="chat-avatar">LK</div>
+              <div class="chat-info">
+                <strong>Leo K.</strong>
+                <span>Overnight Stay</span>
+              </div>
+              <span class="chat-time">Yesterday</span>
+            </div>
+            <div class="chat-item">
+              <div class="chat-avatar">PC</div>
+              <div class="chat-info">
+                <strong>Pawcare Team</strong>
+                <span>Monthly Invoice</span>
+              </div>
+              <span class="chat-time">Mon</span>
+            </div>
+          </div>
+
+          <div class="dashboard-card chat-window">
+            <div class="chat-window-header">
+              <div>
+                <strong>Amelia R.</strong>
+                <span>Central Park Walk · Today</span>
+              </div>
+              <button class="btn btn-ghost btn-small" type="button">View details</button>
+            </div>
+            <div class="chat-window-body">
+              <div class="chat-bubble incoming">
+                <p>Hi Jordan! I am arriving 10 minutes early today.</p>
+                <span>9:10 AM</span>
+              </div>
+              <div class="chat-bubble outgoing">
+                <p>Perfect, Milo is ready by the door.</p>
+                <span>9:11 AM</span>
+              </div>
+              <div class="chat-bubble incoming">
+                <p>Great! I will send photos once we start the walk.</p>
+                <span>9:12 AM</span>
+              </div>
+            </div>
+            <div class="chat-composer">
+              <input type="text" placeholder="Type a message...">
+              <button class="btn btn-primary btn-small" type="button">Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-panel" id="panel-payments" data-panel="payments" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <h1>Payments</h1>
+            <p>View invoices, balances, and payment history.</p>
+          </div>
+          <button class="btn btn-primary" type="button">Pay Balance</button>
+        </div>
+
+        <div class="payment-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Monthly Spend</h2>
+              <span class="chart-meta">Last 6 months</span>
+            </div>
+            <div class="chart-body">
+              <svg class="line-chart" viewBox="0 0 360 160" role="img" aria-label="Monthly spend line chart">
+                <g class="chart-grid">
+                  <line x1="0" y1="20" x2="360" y2="20"></line>
+                  <line x1="0" y1="60" x2="360" y2="60"></line>
+                  <line x1="0" y1="100" x2="360" y2="100"></line>
+                  <line x1="0" y1="140" x2="360" y2="140"></line>
+                </g>
+                <path class="chart-area" d="M10 110 L70 96 L130 120 L190 78 L250 88 L310 60 L350 72 L350 150 L10 150 Z"></path>
+                <path class="chart-line" d="M10 110 L70 96 L130 120 L190 78 L250 88 L310 60 L350 72"></path>
+                <g class="chart-points">
+                  <circle cx="10" cy="110" r="4"></circle>
+                  <circle cx="70" cy="96" r="4"></circle>
+                  <circle cx="130" cy="120" r="4"></circle>
+                  <circle cx="190" cy="78" r="4"></circle>
+                  <circle cx="250" cy="88" r="4"></circle>
+                  <circle cx="310" cy="60" r="4"></circle>
+                  <circle cx="350" cy="72" r="4"></circle>
+                </g>
+              </svg>
+              <div class="chart-labels">
+                <span>Oct</span>
+                <span>Nov</span>
+                <span>Dec</span>
+                <span>Jan</span>
+                <span>Feb</span>
+                <span>Mar</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Payment Method Split</h2>
+              <span class="chart-meta">Last 90 days</span>
+            </div>
+            <div class="chart-body pie-chart-body">
+              <svg class="pie-chart" viewBox="0 0 160 160" role="img" aria-label="Payment method split pie chart">
+                <circle class="pie-ring" cx="80" cy="80" r="52"></circle>
+                <circle class="pie-slice pie-slice--primary" cx="80" cy="80" r="52" stroke-dasharray="196.0 326.7" stroke-dashoffset="0"></circle>
+                <circle class="pie-slice pie-slice--accent" cx="80" cy="80" r="52" stroke-dasharray="81.7 326.7" stroke-dashoffset="-196.0"></circle>
+                <circle class="pie-slice pie-slice--muted" cx="80" cy="80" r="52" stroke-dasharray="49.0 326.7" stroke-dashoffset="-277.7"></circle>
+                <text x="80" y="78" text-anchor="middle" class="pie-center">60%</text>
+                <text x="80" y="96" text-anchor="middle" class="pie-sub">Visa</text>
+              </svg>
+              <div class="pie-legend">
+                <span><i class="legend-dot legend-confirmed"></i>Visa 60%</span>
+                <span><i class="legend-dot legend-pending"></i>Mastercard 25%</span>
+                <span><i class="legend-dot legend-completed"></i>Amex 15%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="payments-grid">
+          <div class="dashboard-card payment-summary-card">
+            <span class="payment-label">Total spent</span>
+            <strong class="payment-total">$1,284</strong>
+            <p>Last payment on Mar 25. Receipts are stored automatically.</p>
+            <button class="btn btn-outline" type="button">View Statement</button>
+          </div>
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h2>Payment History</h2>
+              <button class="btn btn-ghost btn-small" type="button">Export</button>
+            </div>
+            <div class="payment-table">
+              <div class="payment-row payment-head">
+                <span>Date</span>
+                <span>Service</span>
+                <span>Amount</span>
+                <span>Status</span>
+              </div>
+              <div class="payment-row">
+                <span>Apr 01</span>
+                <span>Dog Walking</span>
+                <span>$32.00</span>
+                <span class="status-pill status-confirmed">Paid</span>
+              </div>
+              <div class="payment-row">
+                <span>Mar 25</span>
+                <span>Overnight Care</span>
+                <span>$120.00</span>
+                <span class="status-pill status-confirmed">Paid</span>
+              </div>
+              <div class="payment-row">
+                <span>Mar 18</span>
+                <span>Drop-in Visit</span>
+                <span>$24.00</span>
+                <span class="status-pill status-confirmed">Paid</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-panel" id="panel-settings" data-panel="settings" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <h1>Settings</h1>
+            <p>Manage profile information and preferences.</p>
+          </div>
+          <button class="btn btn-outline" type="button">Save All</button>
+        </div>
+
+        <div class="settings-grid">
+          <form class="dashboard-card settings-card">
+            <h2>Profile Info</h2>
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Full name</span>
+                <input type="text" value="Jordan Miles">
+              </label>
+              <label class="form-field">
+                <span>Email address</span>
+                <input type="email" value="jordan@pawcare.com">
+              </label>
+              <label class="form-field">
+                <span>Phone number</span>
+                <input type="tel" value="+1 (555) 123-4567">
+              </label>
+              <label class="form-field">
+                <span>Address</span>
+                <input type="text" value="214 Hudson St, New York, NY">
+              </label>
+            </div>
+            <button class="btn btn-primary" type="button">Update profile</button>
+          </form>
+
+          <form class="dashboard-card settings-card">
+            <h2>Change Password</h2>
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Current password</span>
+                <input type="password" value="password">
+              </label>
+              <label class="form-field">
+                <span>New password</span>
+                <input type="password" value="password">
+              </label>
+              <label class="form-field">
+                <span>Confirm password</span>
+                <input type="password" value="password">
+              </label>
+            </div>
+            <button class="btn btn-outline" type="button">Update password</button>
+          </form>
+
+          <div class="dashboard-card settings-card">
+            <h2>Preferences</h2>
+            <div class="setting-item">
+              <div>
+                <strong>Booking Reminders</strong>
+                <span>Get alerts before each visit.</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="setting-item">
+              <div>
+                <strong>Photo Updates</strong>
+                <span>Send photo updates during visits.</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="setting-item">
+              <div>
+                <strong>Payment Receipts</strong>
+                <span>Email receipts after each payment.</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/dashboard.js" defer></script>
+</body>
+</html>

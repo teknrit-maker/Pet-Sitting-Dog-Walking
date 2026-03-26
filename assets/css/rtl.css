@@ -1,0 +1,728 @@
+body.rtl {
+  direction: rtl;
+}
+
+body.rtl .header-inner {
+  direction: rtl;
+}
+
+body.rtl .brand {
+  flex-direction: row-reverse;
+}
+
+body.rtl .nav-list {
+  flex-direction: row-reverse;
+}
+
+body.rtl .header-actions {
+  flex-direction: row-reverse;
+}
+
+body.rtl .nav-link,
+body.rtl .dropdown-link {
+  text-align: right;
+}
+
+body.rtl .dropdown {
+  left: auto;
+  right: 0;
+}
+
+body.rtl .dropdown-link:hover,
+body.rtl .dropdown-link:focus-visible {
+  transform: translateX(-2px);
+}
+
+body.rtl .hero-actions,
+body.rtl .home-hero-actions {
+  flex-direction: row-reverse;
+}
+
+body.rtl .home-hero-shell {
+  direction: rtl;
+}
+
+body.rtl .home-hero-content {
+  text-align: right;
+}
+
+body.rtl .home-hero-eyebrow,
+body.rtl .home-hero-pill,
+body.rtl .home-hero-trust,
+body.rtl .search-card-header,
+body.rtl .board-header {
+  flex-direction: row-reverse;
+}
+
+body.rtl .trust-avatars img {
+  margin-left: 0;
+  margin-right: -10px;
+}
+
+body.rtl .trust-avatars img:first-child {
+  margin-right: 0;
+}
+
+body.rtl .home-hero-search {
+  direction: rtl;
+}
+
+body.rtl .search-input {
+  flex-direction: row-reverse;
+}
+
+body.rtl .search-input i {
+  transform: scaleX(-1);
+}
+
+body.rtl .hero-mini-card {
+  right: auto;
+  left: 18px;
+}
+
+body.rtl .hero-mini-card.top {
+  left: auto;
+  right: 18px;
+}
+body.rtl .feature-grid {
+  direction: rtl;
+}
+
+body.rtl .feature-content {
+  text-align: right;
+}
+
+body.rtl .feature-list li {
+  flex-direction: row-reverse;
+}
+
+body.rtl .feature-list i {
+  margin-left: 8px;
+  margin-right: 0;
+}
+body.rtl .service-row {
+  direction: rtl;
+}
+
+body.rtl .service-row.reverse {
+  direction: ltr;
+}
+
+body.rtl .service-text {
+  text-align: right;
+}
+body.rtl .why-grid {
+  direction: rtl;
+}
+
+body.rtl .why-card {
+  text-align: right;
+}
+
+body.rtl .premium-steps {
+  direction: rtl;
+}
+
+body.rtl .premium-step {
+  text-align: right;
+}
+
+body.rtl .service-features li::before {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+body.rtl .compare-table th,
+body.rtl .compare-table td {
+  text-align: right;
+}
+
+body.rtl .faq-item summary {
+  flex-direction: row-reverse;
+}
+
+body.rtl .safety-card {
+  text-align: right;
+}
+
+body.rtl .sitters-luxe-grid {
+  direction: rtl;
+}
+
+body.rtl .sitters-luxe-content {
+  text-align: right;
+}
+
+body.rtl .sitter-mini {
+  flex-direction: row-reverse;
+}
+
+body.rtl .sitter-spotlight-content {
+  text-align: right;
+}
+
+body.rtl .sitter-spotlight-actions {
+  flex-direction: row-reverse;
+}
+
+body.rtl .sitter-spotlight-badge {
+  right: auto;
+  left: 18px;
+}
+
+body.rtl .sitter-spotlight-badge.badge-bottom {
+  right: auto;
+  left: 18px;
+}
+body.rtl .gallery-caption {
+  text-align: right;
+}
+body.rtl .stats-grid {
+  direction: rtl;
+}
+
+body.rtl .stat-item {
+  text-align: right;
+}
+body.rtl .app-grid {
+  direction: rtl;
+}
+
+body.rtl .app-content {
+  text-align: right;
+}
+
+body.rtl .main-card {
+  left: auto;
+  right: 50px;
+}
+
+body.rtl .floating-card {
+  right: auto;
+  left: 40px;
+}
+body.rtl .pricing-min-grid {
+  direction: rtl;
+}
+
+body.rtl .pricing-min-card {
+  text-align: right;
+}
+body.rtl .cta-box {
+  text-align: right;
+}
+body.rtl .about-hero-content {
+  text-align: right;
+}
+body.rtl .mission-grid {
+  direction: rtl;
+}
+
+body.rtl .mission-card {
+  text-align: right;
+}
+body.rtl .why-started-content {
+  text-align: right;
+}
+body.rtl .team-grid {
+  direction: rtl;
+}
+
+body.rtl .team-card {
+  text-align: right;
+}
+body.rtl .trust-wrapper {
+  direction: rtl;
+}
+
+body.rtl .trust-text,
+body.rtl .trust-snippet {
+  text-align: right;
+}
+body.rtl .dog-hero-content {
+  text-align: right;
+}
+
+body.rtl .dog-hero-actions {
+  flex-direction: row-reverse;
+}
+
+body.rtl .dog-hero-trust {
+  flex-direction: row-reverse;
+}
+body.dark-mode .dog-overview-image img {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+body.rtl .dog-how-grid {
+  direction: rtl;
+}
+
+body.rtl .dog-step {
+  text-align: right;
+}
+body.rtl .dog-benefits-grid {
+  direction: rtl;
+}
+
+body.rtl .benefit-card {
+  text-align: right;
+}
+body.rtl .dog-pricing-grid {
+  direction: rtl;
+}
+
+body.rtl .dog-price-card {
+  text-align: right;
+}
+body.rtl .dog-cta-box {
+  text-align: right;
+}
+body.rtl .pet-hero-content {
+  text-align: right;
+}
+
+body.rtl .pet-hero-actions {
+  flex-direction: row-reverse;
+}
+
+body.rtl .pet-hero-trust {
+  flex-direction: row-reverse;
+}
+body.rtl .pet-overview-grid {
+  direction: rtl;
+}
+
+body.rtl .pet-overview-content {
+  text-align: right;
+}
+
+body.rtl .pet-overview-list li {
+  flex-direction: row-reverse;
+}
+body.rtl .pet-how-grid {
+  direction: rtl;
+}
+
+body.rtl .pet-step {
+  text-align: right;
+}
+body.rtl .pet-pricing-grid {
+  direction: rtl;
+}
+
+body.rtl .pet-price-card {
+  text-align: right;
+}
+body.rtl .pet-cta-box {
+  text-align: right;
+}
+body.rtl .overnight-hero-content {
+  text-align: right;
+}
+
+body.rtl .overnight-hero-actions {
+  flex-direction: row-reverse;
+}
+
+body.rtl .overnight-hero-trust {
+  flex-direction: row-reverse;
+}
+body.rtl .overnight-overview-grid {
+  direction: rtl;
+}
+
+body.rtl .overnight-overview-content {
+  text-align: right;
+}
+
+body.rtl .overnight-overview-list li {
+  flex-direction: row-reverse;
+}
+body.rtl .overnight-how-grid {
+  direction: rtl;
+}
+
+body.rtl .overnight-step {
+  text-align: right;
+}
+body.rtl .overnight-benefits-grid {
+  direction: rtl;
+}
+
+body.rtl .overnight-benefit-card {
+  text-align: right;
+}
+body.rtl .overnight-pricing-grid {
+  direction: rtl;
+}
+
+body.rtl .overnight-price-card {
+  text-align: right;
+}
+body.rtl .pricing-hero-content {
+  text-align: right;
+}
+body.rtl .tabs-nav {
+  flex-direction: row-reverse;
+}
+body.rtl .pet-tips-hero-content {
+  text-align: right;
+}
+/* DARK MODE */
+body.dark-mode .article-excerpt {
+  opacity: 0.8;
+}
+
+body.dark-mode .featured-article-image img {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+body.rtl .categories-wrapper {
+  flex-direction: row-reverse;
+}
+body.rtl .articles-wrapper {
+  direction: rtl;
+}
+
+body.rtl .article-card {
+  text-align: right;
+}
+body.rtl .newsletter-form {
+  flex-direction: row-reverse;
+}
+body.rtl .contact-hero-content {
+  text-align: right;
+}
+
+body.rtl .contact-options-grid {
+  direction: rtl;
+}
+
+body.rtl .contact-option-card {
+  text-align: right;
+}
+
+body.rtl .contact-map-shell {
+  direction: rtl;
+}
+
+body.rtl .contact-map-details {
+  text-align: right;
+}
+
+body.rtl .contact-details li {
+  flex-direction: row-reverse;
+}
+
+
+@media (max-width: 1024px) {
+  body.rtl .nav-list {
+    align-items: flex-end;
+  }
+
+  body.rtl .dropdown {
+    margin-right: 0;
+  }
+}
+
+/* CLIENT DASHBOARD RTL */
+body.rtl .dashboard-shell {
+  margin-left: 0;
+  margin-right: var(--dashboard-sidebar-width);
+}
+
+body.rtl .dashboard-sidebar {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 1px solid rgba(27, 43, 52, 0.08);
+}
+
+body.rtl .dashboard-header {
+  flex-direction: row-reverse;
+}
+
+body.rtl .dashboard-header-left,
+body.rtl .dashboard-header-actions,
+body.rtl .dashboard-hero-actions,
+body.rtl .dashboard-card-header,
+body.rtl .payment-meta,
+body.rtl .dashboard-page-actions,
+body.rtl .chat-list-header,
+body.rtl .chat-window-header,
+body.rtl .chat-composer,
+body.rtl .activity-item,
+body.rtl .pet-title {
+  flex-direction: row-reverse;
+}
+
+body.rtl .dashboard-link {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+body.rtl .dashboard-link::after {
+  left: auto;
+  right: 8px;
+}
+
+body.rtl .dashboard-link:hover,
+body.rtl .dashboard-link:focus-visible {
+  transform: translateX(-2px);
+}
+
+body.rtl .dashboard-hero-content,
+body.rtl .dashboard-page-header,
+body.rtl .pet-info,
+body.rtl .message-thread,
+body.rtl .activity-item,
+body.rtl .booking-row,
+body.rtl .payment-row,
+body.rtl .chat-item,
+body.rtl .chat-window,
+body.rtl .settings-card {
+  text-align: right;
+}
+
+body.rtl .dashboard-stats,
+body.rtl .dashboard-charts,
+body.rtl .dashboard-activity,
+body.rtl .admin-charts,
+body.rtl .admin-activity-grid,
+body.rtl .admin-mini-charts,
+body.rtl .messages-layout,
+body.rtl .payments-grid,
+body.rtl .settings-grid,
+body.rtl .form-grid,
+body.rtl .chart-labels,
+body.rtl .booking-charts,
+body.rtl .payment-charts {
+  direction: rtl;
+}
+
+body.rtl .chat-item {
+  direction: rtl;
+}
+
+body.rtl .chat-bubble.incoming {
+  align-self: flex-end;
+}
+
+body.rtl .chat-bubble.outgoing {
+  align-self: flex-start;
+}
+
+body.rtl .pie-legend span {
+  flex-direction: row-reverse;
+}
+
+body.rtl .booking-row button {
+  justify-self: start;
+}
+
+body.rtl .settings-card .btn {
+  align-self: flex-end;
+}
+
+body.rtl .booking-item,
+body.rtl .message-item,
+body.rtl .team-item,
+body.rtl .payment-item {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+body.rtl .booking-row {
+  direction: rtl;
+  text-align: right;
+}
+
+body.rtl .profile-dropdown {
+  right: auto;
+  left: 0;
+}
+
+body.rtl .dropdown-item:hover,
+body.rtl .dropdown-item:focus-visible {
+  transform: translateX(-2px);
+}
+
+@media (max-width: 1024px) {
+  body.rtl .dashboard-shell {
+    margin-right: 0;
+  }
+
+  body.rtl .dashboard-sidebar {
+    transform: translateX(100%);
+  }
+
+  body.rtl.sidebar-open .dashboard-sidebar {
+    transform: translateX(0);
+  }
+}
+
+/* ADMIN DASHBOARD RTL */
+body.rtl .admin-toolbar,
+body.rtl .admin-toolbar-actions,
+body.rtl .review-header,
+body.rtl .notification-card,
+body.rtl .modal-header,
+body.rtl .modal-actions,
+body.rtl .admin-dashboard .sitter-info,
+body.rtl .admin-dashboard .sitter-meta {
+  flex-direction: row-reverse;
+}
+
+body.rtl .admin-search i {
+  left: auto;
+  right: 14px;
+}
+
+body.rtl .admin-search input {
+  padding-left: 14px;
+  padding-right: 38px;
+}
+
+body.rtl .admin-row,
+body.rtl .review-card,
+body.rtl .notification-card,
+body.rtl .modal-content {
+  text-align: right;
+}
+
+body.rtl .admin-actions,
+body.rtl .admin-pagination {
+  justify-content: flex-start;
+}
+
+body.rtl .modal-details {
+  direction: rtl;
+}
+
+body.rtl .auth-tools {
+  right: auto;
+  left: var(--space-3);
+}
+
+body.rtl .auth-heading,
+body.rtl .auth-footer,
+body.rtl .auth-visual-card {
+  text-align: right;
+}
+
+body.rtl .auth-options {
+  flex-direction: row-reverse;
+}
+
+body.rtl .auth-remember {
+  flex-direction: row-reverse;
+}
+
+body.rtl .auth-section-header {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+body.rtl .auth-role-group {
+  flex-direction: row-reverse;
+}
+
+body.rtl .auth-role {
+  flex-direction: row-reverse;
+}
+
+body.rtl .auth-terms {
+  flex-direction: row-reverse;
+}
+
+body.rtl .auth-input {
+  flex-direction: row-reverse;
+}
+
+body.rtl .error-shell {
+  direction: rtl;
+}
+
+body.rtl .error-content {
+  text-align: right;
+}
+
+body.rtl .error-actions {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+body.rtl .error-orb {
+  right: auto;
+  left: 18px;
+}
+
+body.rtl .soon-shell {
+  direction: rtl;
+}
+
+body.rtl .soon-content {
+  text-align: right;
+}
+
+body.rtl .soon-countdown,
+body.rtl .soon-social,
+body.rtl .soon-badges {
+  flex-direction: row-reverse;
+}
+
+body.rtl .soon-input {
+  flex-direction: row-reverse;
+}
+
+body.rtl .soon-input input {
+  text-align: right;
+}
+
+body.rtl .soon-orb {
+  right: auto;
+  left: 20px;
+}
+
+body.rtl .docs-header-inner,
+body.rtl .docs-brand,
+body.rtl .docs-actions {
+  direction: rtl;
+}
+
+body.rtl .docs-layout {
+  direction: rtl;
+}
+
+body.rtl .docs-content {
+  text-align: right;
+}
+
+body.rtl .docs-nav-link:hover,
+body.rtl .docs-nav-link:focus-visible {
+  transform: translateX(-2px);
+}
+
+body.rtl .docs-nav-link.is-active {
+  box-shadow: inset -2px 0 0 rgba(58, 141, 140, 0.9);
+}
+
+body.rtl .copy-btn {
+  right: auto;
+  left: 12px;
+}
+
+body.rtl .docs-menu-toggle {
+  order: -1;
+}
+
+@media (max-width: 1024px) {
+  body.rtl .docs-sidebar {
+    left: auto;
+    right: 0;
+    transform: translateX(110%);
+  }
+
+  body.rtl.docs-nav-open .docs-sidebar {
+    transform: translateX(0);
+  }
+}

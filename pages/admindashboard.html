@@ -1,0 +1,1134 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Admin dashboard for Pawcare operations and analytics.">
+  <title>Pawcare | Admin Dashboard</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="dashboard-body admin-dashboard">
+  <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Admin dashboard menu">
+    <div class="dashboard-sidebar-header">
+      <span class="sidebar-kicker">Admin Console</span>
+      <p class="sidebar-subtitle">Operations and control</p>
+    </div>
+
+    <nav class="dashboard-nav" aria-label="Dashboard navigation">
+      <button class="dashboard-link is-active" type="button" data-panel="dashboard" aria-controls="panel-dashboard" aria-selected="true">
+        <span class="link-icon"><i class="fa-solid fa-chart-line"></i></span>
+        Dashboard
+      </button>
+      <button class="dashboard-link" type="button" data-panel="users" aria-controls="panel-users" aria-selected="false">
+        <span class="link-icon"><i class="fa-solid fa-users"></i></span>
+        Users Management
+      </button>
+      <button class="dashboard-link" type="button" data-panel="sitters" aria-controls="panel-sitters" aria-selected="false">
+        <span class="link-icon"><i class="fa-solid fa-user-check"></i></span>
+        Sitters Management
+      </button>
+      <button class="dashboard-link" type="button" data-panel="bookings" aria-controls="panel-bookings" aria-selected="false">
+        <span class="link-icon"><i class="fa-regular fa-calendar-check"></i></span>
+        Bookings Management
+      </button>
+      <button class="dashboard-link" type="button" data-panel="services" aria-controls="panel-services" aria-selected="false">
+        <span class="link-icon"><i class="fa-solid fa-layer-group"></i></span>
+        Services Management
+      </button>
+      <button class="dashboard-link" type="button" data-panel="payments" aria-controls="panel-payments" aria-selected="false">
+        <span class="link-icon"><i class="fa-regular fa-credit-card"></i></span>
+        Payments & Transactions
+      </button>
+      <button class="dashboard-link" type="button" data-panel="reviews" aria-controls="panel-reviews" aria-selected="false">
+        <span class="link-icon"><i class="fa-solid fa-star"></i></span>
+        Reviews & Ratings
+      </button>
+      <button class="dashboard-link" type="button" data-panel="reports" aria-controls="panel-reports" aria-selected="false">
+        <span class="link-icon"><i class="fa-solid fa-chart-pie"></i></span>
+        Reports & Analytics
+      </button>
+      <button class="dashboard-link" type="button" data-panel="notifications" aria-controls="panel-notifications" aria-selected="false">
+        <span class="link-icon"><i class="fa-regular fa-bell"></i></span>
+        Notifications
+      </button>
+      <button class="dashboard-link" type="button" data-panel="settings" aria-controls="panel-settings" aria-selected="false">
+        <span class="link-icon"><i class="fa-solid fa-gear"></i></span>
+        Settings
+      </button>
+    </nav>
+
+    <div class="sidebar-support">
+      <div class="dashboard-card support-card">
+        <span class="support-title">Admin focus</span>
+        <p>Monitor service quality, revenue, and platform health in real time.</p>
+        <button class="btn btn-primary" type="button">Generate Report</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dashboard-overlay" id="dashboardOverlay" aria-hidden="true"></div>
+
+  <div class="dashboard-shell">
+    <header class="dashboard-header" id="dashboardHeader">
+      <div class="dashboard-header-left">
+        <a class="brand" href="index.html" aria-label="Pawcare home">
+          <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+          <span class="brand-text">Pawcare</span>
+        </a>
+      </div>
+
+      <div class="dashboard-header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
+          <i class="fa-solid fa-align-right"></i>
+        </button>
+        <button class="icon-btn dashboard-notification" type="button" aria-label="Notifications">
+          <i class="fa-regular fa-bell"></i>
+          <span class="notify-badge">6</span>
+        </button>
+        <div class="dashboard-profile" id="profileMenu">
+          <button class="profile-trigger" id="profileToggle" type="button" aria-haspopup="true" aria-expanded="false">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=60" alt="Profile avatar" class="profile-avatar">
+            <span class="profile-name">Alex</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="profile-dropdown" role="menu" aria-label="Profile menu">
+            <button class="dropdown-item" type="button">Profile</button>
+            <button class="dropdown-item" type="button">Settings</button>
+            <button class="dropdown-item" type="button">Logout</button>
+          </div>
+        </div>
+        <button class="dashboard-hamburger" id="dashboardToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <section class="dashboard-panel is-active" id="panel-dashboard" data-panel="dashboard" aria-hidden="false">
+        <div class="dashboard-page-header">
+          <div>
+            <span class="dashboard-kicker">Admin Dashboard</span>
+            <h1>Good morning, Alex.</h1>
+            <p>Track platform health, revenue, and service quality at a glance.</p>
+          </div>
+          <div class="dashboard-page-actions">
+            <button class="btn btn-primary" type="button">Create Report</button>
+            <button class="btn btn-outline" type="button">Export Data</button>
+          </div>
+        </div>
+        <div class="dashboard-stats">
+          <article class="dashboard-card stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+            <div>
+              <span class="stat-label">Total users</span>
+              <strong class="stat-value">24,580</strong>
+            </div>
+          </article>
+          <article class="dashboard-card stat-card">
+            <div class="stat-icon"><i class="fa-regular fa-calendar-check"></i></div>
+            <div>
+              <span class="stat-label">Total bookings</span>
+              <strong class="stat-value">8,412</strong>
+            </div>
+          </article>
+          <article class="dashboard-card stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-coins"></i></div>
+            <div>
+              <span class="stat-label">Revenue</span>
+              <strong class="stat-value">$412k</strong>
+            </div>
+          </article>
+          <article class="dashboard-card stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-user-shield"></i></div>
+            <div>
+              <span class="stat-label">Active sitters</span>
+              <strong class="stat-value">1,284</strong>
+            </div>
+          </article>
+        </div>
+
+        <div class="admin-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Bookings Over Time</h2>
+              <span class="chart-meta">Last 30 days</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="adminBookingsChart" aria-label="Bookings line chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Services Usage</h2>
+              <span class="chart-meta">Top categories</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="adminServicesChart" aria-label="Services bar chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Revenue Distribution</h2>
+              <span class="chart-meta">This quarter</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="adminRevenueChart" aria-label="Revenue pie chart" role="img"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-activity-grid">
+          <div class="dashboard-card activity-card">
+            <div class="dashboard-card-header">
+              <h2>Latest bookings</h2>
+              <span class="chart-meta">Today</span>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <strong>Olivia Tran</strong>
+                <span>Booked overnight sitting for Luna.</span>
+              </div>
+              <div class="activity-item">
+                <strong>Marcus Lee</strong>
+                <span>Added two new daycare slots.</span>
+              </div>
+              <div class="activity-item">
+                <strong>Nina Patel</strong>
+                <span>Confirmed recurring walks.</span>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-card activity-card">
+            <div class="dashboard-card-header">
+              <h2>New users</h2>
+              <span class="chart-meta">Last 24 hours</span>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <strong>Gabriel Knight</strong>
+                <span>Premium plan activated.</span>
+              </div>
+              <div class="activity-item">
+                <strong>Ava Romero</strong>
+                <span>Verified email and phone.</span>
+              </div>
+              <div class="activity-item">
+                <strong>Rina Ahmed</strong>
+                <span>Submitted sitter application.</span>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-card activity-card">
+            <div class="dashboard-card-header">
+              <h2>Alerts</h2>
+              <span class="chart-meta">System health</span>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <strong>Low availability</strong>
+                <span>Downtown is at 12% sitter coverage.</span>
+              </div>
+              <div class="activity-item">
+                <strong>Chargeback review</strong>
+                <span>3 disputed transactions need review.</span>
+              </div>
+              <div class="activity-item">
+                <strong>Service score</strong>
+                <span>Walking rating dipped to 4.3.</span>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-card activity-card">
+            <div class="dashboard-card-header">
+              <h2>Support queue</h2>
+              <span class="chart-meta">Open tickets</span>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <strong>Priority escalations</strong>
+                <span>2 high-priority cases awaiting action.</span>
+              </div>
+              <div class="activity-item">
+                <strong>Response time</strong>
+                <span>Average first reply is 18 minutes.</span>
+              </div>
+              <div class="activity-item">
+                <strong>SLA risk</strong>
+                <span>5 tickets approaching SLA limit.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dashboard-panel" id="panel-users" data-panel="users" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <span class="dashboard-kicker">Users Management</span>
+            <h1>Manage customers and access.</h1>
+            <p>Search, filter, and manage accounts across the platform.</p>
+          </div>
+          <div class="dashboard-page-actions">
+            <button class="btn btn-primary" type="button">Add User</button>
+            <button class="btn btn-outline" type="button">Bulk Import</button>
+          </div>
+        </div>
+
+        <div class="dashboard-card admin-toolbar">
+          <div class="admin-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="userSearch" type="search" placeholder="Search name or email">
+          </div>
+          <div class="admin-toolbar-actions">
+            <select class="admin-select" id="userRoleFilter">
+              <option value="all">All roles</option>
+              <option value="client">Client</option>
+              <option value="sitter">Sitter</option>
+              <option value="admin">Admin</option>
+            </select>
+            <select class="admin-select" id="userStatusFilter">
+              <option value="all">All status</option>
+              <option value="active">Active</option>
+              <option value="invited">Invited</option>
+              <option value="suspended">Suspended</option>
+            </select>
+            <button class="btn btn-outline" type="button">Export</button>
+          </div>
+        </div>
+
+        <div class="admin-mini-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>User Growth</h2>
+              <span class="chart-meta">Last 8 weeks</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="usersGrowthChart" aria-label="User growth chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Role Distribution</h2>
+              <span class="chart-meta">Current mix</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="usersRoleChart" aria-label="User roles chart" role="img"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card admin-table users-table">
+          <div class="admin-row admin-head">
+            <span>Name</span>
+            <span>Email</span>
+            <span>Role</span>
+            <span>Status</span>
+            <span>Actions</span>
+          </div>
+          <div class="admin-row admin-user-row" data-name="Olivia Tran" data-email="olivia@pawcare.com" data-role="client" data-status="active">
+            <div class="admin-cell">
+              <strong>Olivia Tran</strong>
+              <span>Joined Feb 12</span>
+            </div>
+            <div class="admin-cell">olivia@pawcare.com</div>
+            <div class="admin-cell">Client</div>
+            <div class="admin-cell"><span class="status-pill status-active">Active</span></div>
+            <div class="admin-actions">
+              <button class="btn btn-outline btn-sm" type="button">View</button>
+              <button class="btn btn-outline btn-sm" type="button">Edit</button>
+              <button class="btn btn-outline btn-sm" type="button">Delete</button>
+            </div>
+          </div>
+          <div class="admin-row admin-user-row" data-name="Marcus Lee" data-email="marcus@pawcare.com" data-role="sitter" data-status="invited">
+            <div class="admin-cell">
+              <strong>Marcus Lee</strong>
+              <span>Applied sitter</span>
+            </div>
+            <div class="admin-cell">marcus@pawcare.com</div>
+            <div class="admin-cell">Sitter</div>
+            <div class="admin-cell"><span class="status-pill status-invited">Invited</span></div>
+            <div class="admin-actions">
+              <button class="btn btn-outline btn-sm" type="button">View</button>
+              <button class="btn btn-outline btn-sm" type="button">Edit</button>
+              <button class="btn btn-outline btn-sm" type="button">Delete</button>
+            </div>
+          </div>
+          <div class="admin-row admin-user-row" data-name="Ava Romero" data-email="ava@pawcare.com" data-role="client" data-status="active">
+            <div class="admin-cell">
+              <strong>Ava Romero</strong>
+              <span>Returning user</span>
+            </div>
+            <div class="admin-cell">ava@pawcare.com</div>
+            <div class="admin-cell">Client</div>
+            <div class="admin-cell"><span class="status-pill status-active">Active</span></div>
+            <div class="admin-actions">
+              <button class="btn btn-outline btn-sm" type="button">View</button>
+              <button class="btn btn-outline btn-sm" type="button">Edit</button>
+              <button class="btn btn-outline btn-sm" type="button">Delete</button>
+            </div>
+          </div>
+          <div class="admin-row admin-user-row" data-name="Gabriel Knight" data-email="gabriel@pawcare.com" data-role="admin" data-status="active">
+            <div class="admin-cell">
+              <strong>Gabriel Knight</strong>
+              <span>Ops admin</span>
+            </div>
+            <div class="admin-cell">gabriel@pawcare.com</div>
+            <div class="admin-cell">Admin</div>
+            <div class="admin-cell"><span class="status-pill status-active">Active</span></div>
+            <div class="admin-actions">
+              <button class="btn btn-outline btn-sm" type="button">View</button>
+              <button class="btn btn-outline btn-sm" type="button">Edit</button>
+              <button class="btn btn-outline btn-sm" type="button">Delete</button>
+            </div>
+          </div>
+          <div class="admin-row admin-user-row" data-name="Rina Ahmed" data-email="rina@pawcare.com" data-role="sitter" data-status="suspended">
+            <div class="admin-cell">
+              <strong>Rina Ahmed</strong>
+              <span>Under review</span>
+            </div>
+            <div class="admin-cell">rina@pawcare.com</div>
+            <div class="admin-cell">Sitter</div>
+            <div class="admin-cell"><span class="status-pill status-suspended">Suspended</span></div>
+            <div class="admin-actions">
+              <button class="btn btn-outline btn-sm" type="button">View</button>
+              <button class="btn btn-outline btn-sm" type="button">Edit</button>
+              <button class="btn btn-outline btn-sm" type="button">Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-pagination" id="userPagination"></div>
+      </section>
+
+      <section class="dashboard-panel" id="panel-sitters" data-panel="sitters" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <span class="dashboard-kicker">Sitters Management</span>
+            <h1>Review and activate sitters.</h1>
+            <p>Approve or reject new applications and monitor active sitters.</p>
+          </div>
+          <div class="dashboard-page-actions">
+            <button class="btn btn-primary" type="button">Invite Sitter</button>
+          </div>
+        </div>
+
+        <div class="admin-mini-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Approvals Trend</h2>
+              <span class="chart-meta">Last 6 weeks</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="sittersApprovalChart" aria-label="Sitter approvals chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Rating Mix</h2>
+              <span class="chart-meta">All sitters</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="sittersRatingChart" aria-label="Sitter rating distribution chart" role="img"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="sitter-grid">
+          <article class="dashboard-card sitter-card">
+            <img class="sitter-photo" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=60" alt="Sitter profile">
+            <div class="sitter-info">
+              <div>
+                <h3>Danielle Ross</h3>
+                <p>Downtown • 5 years</p>
+              </div>
+              <span class="rating-stars">?????</span>
+            </div>
+            <div class="sitter-meta">
+              <span class="status-pill status-active">Active</span>
+              <span class="team-status">4.9 rating</span>
+            </div>
+            <div class="sitter-actions">
+              <button class="btn btn-outline btn-sm" type="button">Approve</button>
+              <button class="btn btn-outline btn-sm" type="button">Reject</button>
+            </div>
+          </article>
+          <article class="dashboard-card sitter-card">
+            <img class="sitter-photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=60" alt="Sitter profile">
+            <div class="sitter-info">
+              <div>
+                <h3>Eric Benson</h3>
+                <p>Midtown • 3 years</p>
+              </div>
+              <span class="rating-stars">?????</span>
+            </div>
+            <div class="sitter-meta">
+              <span class="status-pill status-invited">Pending</span>
+              <span class="team-status">4.6 rating</span>
+            </div>
+            <div class="sitter-actions">
+              <button class="btn btn-outline btn-sm" type="button">Approve</button>
+              <button class="btn btn-outline btn-sm" type="button">Reject</button>
+            </div>
+          </article>
+          <article class="dashboard-card sitter-card">
+            <img class="sitter-photo" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=600&q=60" alt="Sitter profile">
+            <div class="sitter-info">
+              <div>
+                <h3>Maya King</h3>
+                <p>Uptown • 2 years</p>
+              </div>
+              <span class="rating-stars">?????</span>
+            </div>
+            <div class="sitter-meta">
+              <span class="status-pill status-active">Active</span>
+              <span class="team-status">4.8 rating</span>
+            </div>
+            <div class="sitter-actions">
+              <button class="btn btn-outline btn-sm" type="button">Approve</button>
+              <button class="btn btn-outline btn-sm" type="button">Reject</button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="dashboard-panel" id="panel-bookings" data-panel="bookings" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <span class="dashboard-kicker">Bookings Management</span>
+            <h1>Monitor and adjust bookings.</h1>
+            <p>Track status, payments, and service delivery.</p>
+          </div>
+          <div class="dashboard-page-actions">
+            <button class="btn btn-primary" type="button">Create Booking</button>
+          </div>
+        </div>
+
+        <div class="dashboard-card dashboard-filters">
+          <span class="filter-chip is-active" data-filter="all">All</span>
+          <span class="filter-chip" data-filter="confirmed">Confirmed</span>
+          <span class="filter-chip" data-filter="pending">Pending</span>
+          <span class="filter-chip" data-filter="completed">Completed</span>
+        </div>
+
+        <div class="admin-mini-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Booking Volume</h2>
+              <span class="chart-meta">Last 10 days</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="bookingsVolumeChart" aria-label="Booking volume chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Status Split</h2>
+              <span class="chart-meta">This month</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="bookingsStatusChart" aria-label="Booking status chart" role="img"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card bookings-table booking-table">
+          <div class="booking-row booking-head">
+            <span>User</span>
+            <span>Service</span>
+            <span>Date</span>
+            <span>Status</span>
+            <span>Payment</span>
+            <span>Actions</span>
+          </div>
+          <div class="booking-row" data-status="confirmed">
+            <div>
+              <strong>Olivia Tran</strong>
+              <span class="team-status">VIP client</span>
+            </div>
+            <div>Overnight Stay</div>
+            <div>Mar 27, 2026</div>
+            <div><span class="status-confirmed">Confirmed</span></div>
+            <div>$220</div>
+            <button class="btn btn-outline btn-sm" type="button" data-modal-target="bookingModal" data-user="Olivia Tran" data-service="Overnight Stay" data-date="Mar 27, 2026" data-status="Confirmed" data-payment="$220">View details</button>
+          </div>
+          <div class="booking-row" data-status="pending">
+            <div>
+              <strong>Marcus Lee</strong>
+              <span class="team-status">New client</span>
+            </div>
+            <div>Dog Walking</div>
+            <div>Mar 29, 2026</div>
+            <div><span class="status-pending">Pending</span></div>
+            <div>$48</div>
+            <button class="btn btn-outline btn-sm" type="button" data-modal-target="bookingModal" data-user="Marcus Lee" data-service="Dog Walking" data-date="Mar 29, 2026" data-status="Pending" data-payment="$48">View details</button>
+          </div>
+          <div class="booking-row" data-status="completed">
+            <div>
+              <strong>Ava Romero</strong>
+              <span class="team-status">Recurring</span>
+            </div>
+            <div>Pet Sitting</div>
+            <div>Mar 20, 2026</div>
+            <div><span class="status-completed">Completed</span></div>
+            <div>$160</div>
+            <button class="btn btn-outline btn-sm" type="button" data-modal-target="bookingModal" data-user="Ava Romero" data-service="Pet Sitting" data-date="Mar 20, 2026" data-status="Completed" data-payment="$160">View details</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-panel" id="panel-services" data-panel="services" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <span class="dashboard-kicker">Services Management</span>
+            <h1>Control service catalog.</h1>
+            <p>Adjust pricing and monitor performance by service type.</p>
+          </div>
+          <div class="dashboard-page-actions">
+            <button class="btn btn-primary" type="button">Add Service</button>
+          </div>
+        </div>
+
+        <div class="admin-mini-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Service Demand</h2>
+              <span class="chart-meta">Weekly trend</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="servicesTrendChart" aria-label="Service demand chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Service Share</h2>
+              <span class="chart-meta">Top categories</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="servicesShareChart" aria-label="Service share chart" role="img"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card admin-table services-table">
+          <div class="admin-row admin-head">
+            <span>Service</span>
+            <span>Category</span>
+            <span>Base price</span>
+            <span>Status</span>
+            <span>Actions</span>
+          </div>
+          <div class="admin-row">
+            <div class="admin-cell">
+              <strong>Dog Walking</strong>
+              <span>45 min standard walk</span>
+            </div>
+            <div class="admin-cell">Walks</div>
+            <div class="admin-cell">$24</div>
+            <div class="admin-cell"><span class="status-pill status-active">Active</span></div>
+            <div class="admin-actions">
+              <button class="btn btn-outline btn-sm" type="button">Edit</button>
+              <button class="btn btn-outline btn-sm" type="button">Pause</button>
+            </div>
+          </div>
+          <div class="admin-row">
+            <div class="admin-cell">
+              <strong>Overnight Sitting</strong>
+              <span>8pm - 7am overnight care</span>
+            </div>
+            <div class="admin-cell">Sitting</div>
+            <div class="admin-cell">$110</div>
+            <div class="admin-cell"><span class="status-pill status-active">Active</span></div>
+            <div class="admin-actions">
+              <button class="btn btn-outline btn-sm" type="button">Edit</button>
+              <button class="btn btn-outline btn-sm" type="button">Pause</button>
+            </div>
+          </div>
+          <div class="admin-row">
+            <div class="admin-cell">
+              <strong>Daycare Drop In</strong>
+              <span>Half-day stay</span>
+            </div>
+            <div class="admin-cell">Daycare</div>
+            <div class="admin-cell">$48</div>
+            <div class="admin-cell"><span class="status-pill status-invited">Seasonal</span></div>
+            <div class="admin-actions">
+              <button class="btn btn-outline btn-sm" type="button">Edit</button>
+              <button class="btn btn-outline btn-sm" type="button">Pause</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dashboard-panel" id="panel-payments" data-panel="payments" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <span class="dashboard-kicker">Payments & Transactions</span>
+            <h1>Track revenue flow.</h1>
+            <p>Monitor payouts, refunds, and high-value transactions.</p>
+          </div>
+          <div class="dashboard-page-actions">
+            <button class="btn btn-primary" type="button">Download Report</button>
+          </div>
+        </div>
+
+        <div class="payments-grid">
+          <div class="dashboard-card payment-summary-card">
+            <span class="payment-label">Total revenue</span>
+            <strong class="payment-total">$412,580</strong>
+            <p>Up 12% from last month</p>
+            <div class="payment-meta">
+              <span>Avg. order: $62</span>
+              <span>Refunds: 1.2%</span>
+            </div>
+          </div>
+          <div class="dashboard-card payment-card">
+            <div class="payment-card-icon"><i class="fa-solid fa-wallet"></i></div>
+            <div>
+              <span class="payment-label">Pending payouts</span>
+              <strong class="payment-total">$28,420</strong>
+              <p class="payment-meta">Next payout in 2 days</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-mini-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Revenue Trend</h2>
+              <span class="chart-meta">Last 12 weeks</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="paymentsTrendChart" aria-label="Revenue trend chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Payment Methods</h2>
+              <span class="chart-meta">This quarter</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="paymentsMethodChart" aria-label="Payment method chart" role="img"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card payment-table">
+          <div class="payment-row payment-head">
+            <span>Transaction</span>
+            <span>Client</span>
+            <span>Date</span>
+            <span>Amount</span>
+          </div>
+          <div class="payment-row">
+            <div class="payment-item">
+              <strong>INV-2031</strong>
+              <span>Overnight Sitting</span>
+            </div>
+            <div>Olivia Tran</div>
+            <div>Mar 25, 2026</div>
+            <div class="payment-total">$220</div>
+          </div>
+          <div class="payment-row">
+            <div class="payment-item">
+              <strong>INV-2030</strong>
+              <span>Dog Walking</span>
+            </div>
+            <div>Marcus Lee</div>
+            <div>Mar 24, 2026</div>
+            <div class="payment-total">$48</div>
+          </div>
+          <div class="payment-row">
+            <div class="payment-item">
+              <strong>INV-2029</strong>
+              <span>Daycare</span>
+            </div>
+            <div>Ava Romero</div>
+            <div>Mar 23, 2026</div>
+            <div class="payment-total">$96</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-panel" id="panel-reviews" data-panel="reviews" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <span class="dashboard-kicker">Reviews & Ratings</span>
+            <h1>Keep quality high.</h1>
+            <p>Moderate feedback and highlight great service.</p>
+          </div>
+          <div class="dashboard-page-actions">
+            <button class="btn btn-primary" type="button">Export Reviews</button>
+          </div>
+        </div>
+
+        <div class="admin-mini-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Review Volume</h2>
+              <span class="chart-meta">Last 6 weeks</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="reviewsTrendChart" aria-label="Review volume chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Ratings Mix</h2>
+              <span class="chart-meta">All services</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="reviewsRatingChart" aria-label="Ratings mix chart" role="img"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-list">
+          <article class="dashboard-card review-card">
+            <div class="review-header">
+              <div>
+                <strong>Olivia Tran</strong>
+                <span class="review-meta">Overnight Sitting • Mar 25</span>
+              </div>
+              <span class="rating-stars">?????</span>
+            </div>
+            <p>Fantastic care for Luna and clear updates throughout the night.</p>
+            <div class="review-actions">
+              <button class="btn btn-outline btn-sm" type="button">Approve</button>
+              <button class="btn btn-outline btn-sm" type="button">Remove</button>
+            </div>
+          </article>
+          <article class="dashboard-card review-card">
+            <div class="review-header">
+              <div>
+                <strong>Marcus Lee</strong>
+                <span class="review-meta">Dog Walking • Mar 24</span>
+              </div>
+              <span class="rating-stars">?????</span>
+            </div>
+            <p>Great walk but would love a longer update summary.</p>
+            <div class="review-actions">
+              <button class="btn btn-outline btn-sm" type="button">Approve</button>
+              <button class="btn btn-outline btn-sm" type="button">Remove</button>
+            </div>
+          </article>
+          <article class="dashboard-card review-card">
+            <div class="review-header">
+              <div>
+                <strong>Ava Romero</strong>
+                <span class="review-meta">Daycare • Mar 23</span>
+              </div>
+              <span class="rating-stars">?????</span>
+            </div>
+            <p>Lovely staff and easy pickup. Milo was happy and calm.</p>
+            <div class="review-actions">
+              <button class="btn btn-outline btn-sm" type="button">Approve</button>
+              <button class="btn btn-outline btn-sm" type="button">Remove</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="dashboard-panel" id="panel-reports" data-panel="reports" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <span class="dashboard-kicker">Reports & Analytics</span>
+            <h1>Advanced analytics.</h1>
+            <p>Explore trends by date, service, and region.</p>
+          </div>
+          <div class="dashboard-page-actions">
+            <button class="btn btn-primary" type="button">Save Report</button>
+          </div>
+        </div>
+
+        <div class="dashboard-card reports-toolbar">
+          <div class="admin-toolbar-actions">
+            <label class="form-field">
+              <span>From</span>
+              <input type="date" value="2026-03-01">
+            </label>
+            <label class="form-field">
+              <span>To</span>
+              <input type="date" value="2026-03-25">
+            </label>
+            <label class="form-field">
+              <span>Segment</span>
+              <select class="admin-select">
+                <option>All services</option>
+                <option>Walking</option>
+                <option>Sitting</option>
+                <option>Daycare</option>
+              </select>
+            </label>
+          </div>
+          <button class="btn btn-outline" type="button">Apply Filters</button>
+        </div>
+
+        <div class="reports-grid">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Booking volume</h2>
+              <span class="chart-meta">Weekly trend</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="reportsLineChart" aria-label="Reports line chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Service mix</h2>
+              <span class="chart-meta">Category share</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="reportsBarChart" aria-label="Reports bar chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Revenue split</h2>
+              <span class="chart-meta">By plan</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="reportsPieChart" aria-label="Reports pie chart" role="img"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dashboard-panel" id="panel-notifications" data-panel="notifications" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <span class="dashboard-kicker">Notifications</span>
+            <h1>Operational updates.</h1>
+            <p>Stay ahead of system alerts and team messages.</p>
+          </div>
+          <div class="dashboard-page-actions">
+            <button class="btn btn-primary" type="button">Mark All Read</button>
+          </div>
+        </div>
+
+        <div class="admin-mini-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Alert Volume</h2>
+              <span class="chart-meta">Last 7 days</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="notificationsTrendChart" aria-label="Alert volume chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Alert Types</h2>
+              <span class="chart-meta">Current mix</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="notificationsTypeChart" aria-label="Alert type chart" role="img"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="notification-list">
+          <div class="dashboard-card notification-card">
+            <div>
+              <strong>New sitter application</strong>
+              <p>Jordan Wilson submitted a new application for review.</p>
+            </div>
+            <span class="notification-time">2 min ago</span>
+          </div>
+          <div class="dashboard-card notification-card">
+            <div>
+              <strong>Payment dispute</strong>
+              <p>3 transactions require chargeback review.</p>
+            </div>
+            <span class="notification-time">1 hour ago</span>
+          </div>
+          <div class="dashboard-card notification-card">
+            <div>
+              <strong>Service quality alert</strong>
+              <p>Average rating dropped below 4.4 in Midtown.</p>
+            </div>
+            <span class="notification-time">Yesterday</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-panel" id="panel-settings" data-panel="settings" aria-hidden="true">
+        <div class="dashboard-page-header">
+          <div>
+            <span class="dashboard-kicker">Settings</span>
+            <h1>Admin preferences.</h1>
+            <p>Manage profile, platform, and notifications.</p>
+          </div>
+          <div class="dashboard-page-actions">
+            <button class="btn btn-primary" type="button">Save Changes</button>
+          </div>
+        </div>
+
+        <div class="admin-mini-charts">
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Automation Usage</h2>
+              <span class="chart-meta">Last 30 days</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="settingsUsageChart" aria-label="Automation usage chart" role="img"></canvas>
+            </div>
+          </div>
+          <div class="dashboard-card chart-card">
+            <div class="dashboard-card-header">
+              <h2>Notification Split</h2>
+              <span class="chart-meta">By channel</span>
+            </div>
+            <div class="chart-body chart-canvas">
+              <canvas id="settingsChannelChart" aria-label="Notification channel chart" role="img"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-grid">
+          <div class="dashboard-card settings-card">
+            <h2>Admin profile</h2>
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Full name</span>
+                <input type="text" value="Alex Morgan">
+              </label>
+              <label class="form-field">
+                <span>Email</span>
+                <input type="email" value="alex@pawcare.com">
+              </label>
+              <label class="form-field">
+                <span>Role</span>
+                <input type="text" value="Operations Lead">
+              </label>
+              <label class="form-field">
+                <span>Phone</span>
+                <input type="tel" value="(555) 984-2210">
+              </label>
+            </div>
+            <button class="btn btn-outline" type="button">Update profile</button>
+          </div>
+
+          <div class="dashboard-card settings-card">
+            <h2>Platform settings</h2>
+            <div class="setting-item">
+              <div>
+                <strong>Auto-approve repeat clients</strong>
+                <span>Skip manual review for recurring users.</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="setting-item">
+              <div>
+                <strong>Require sitter background check</strong>
+                <span>Enforce yearly verification.</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="setting-item">
+              <div>
+                <strong>Dynamic pricing</strong>
+                <span>Adjust pricing based on demand.</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="dashboard-card settings-card">
+            <h2>Notification settings</h2>
+            <div class="setting-item">
+              <div>
+                <strong>Critical alerts</strong>
+                <span>Always send via email and SMS.</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="setting-item">
+              <div>
+                <strong>Daily summary</strong>
+                <span>Receive a morning digest.</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="setting-item">
+              <div>
+                <strong>Team mentions</strong>
+                <span>Notify when tagged by staff.</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="bookingModal" aria-hidden="true" role="dialog" aria-labelledby="bookingModalTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="bookingModalTitle">Booking Details</h3>
+        <button class="icon-btn" type="button" data-modal-close aria-label="Close booking details">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-details">
+        <div>
+          <span>User</span>
+          <strong data-modal-field="user">Olivia Tran</strong>
+        </div>
+        <div>
+          <span>Service</span>
+          <strong data-modal-field="service">Overnight Stay</strong>
+        </div>
+        <div>
+          <span>Date</span>
+          <strong data-modal-field="date">Mar 27, 2026</strong>
+        </div>
+        <div>
+          <span>Status</span>
+          <strong data-modal-field="status">Confirmed</strong>
+        </div>
+        <div>
+          <span>Payment</span>
+          <strong data-modal-field="payment">$220</strong>
+        </div>
+      </div>
+      <p class="modal-note">Actions and service notes will appear here.</p>
+      <div class="modal-actions">
+        <button class="btn btn-outline" type="button" data-modal-close>Close</button>
+        <button class="btn btn-primary" type="button">Resolve</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
+

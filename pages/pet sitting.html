@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pawcare provides trusted pet sitting, dog walking, and overnight care with seamless booking and real-time updates.">
+  <title>Pawcare | Pet Sitting & Dog Walking Service</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pawcare home">
+        <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+        <span class="brand-text">Pawcare</span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Home
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="index.html">Homepage 1</a>
+              <a class="dropdown-link" href="homepage-2.html">Homepage 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Services
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="Dogwalking.html">Dog Walking</a>
+              <a class="dropdown-link" href="pet sitting.html">Pet Sitting</a>
+              <a class="dropdown-link" href="overnight.html">Overnight Care</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="pet-tips.html">Pet Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Dashboard
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="clientdashboard.html">Client Dashboard</a>
+              <a class="dropdown-link" href="admindashboard.html">Admin Dashboard</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
+          <i class="fa-solid fa-align-right"></i>
+        </button>
+        <a class="btn btn-outline" href="login.html">Login</a>
+        <a class="btn btn-primary" href="contact.html">Book Now</a>
+        <button class="hamburger" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <section class="pet-hero section" id="pet-hero">
+  <div class="pet-hero-bg">
+    <img src="../assets/images/dogsitting-hero.avif" alt="Pet sitting">
+  </div>
+
+  <div class="container pet-hero-content" data-reveal>
+
+    <!-- LABEL -->
+    <span class="hero-eyebrow">Pet Sitting</span>
+
+    <!-- HEADLINE -->
+    <h1 class="pet-hero-title">
+      Loving care for your pet, right at home
+    </h1>
+
+    <!-- SUBTEXT -->
+    <p class="pet-hero-text">
+      Keep your pet comfortable and stress-free with trusted sitters who follow their routine and provide constant care.
+    </p>
+
+    <!-- CTA -->
+    <div class="pet-hero-actions">
+      <a href="contact.html" class="btn btn-primary">Book Now</a>
+      <a href="#pricing" class="btn btn-outline">View Pricing</a>
+    </div>
+
+    <!-- TRUST BADGES -->
+    <div class="pet-hero-trust">
+      <span><i class="fa-solid fa-circle-check"></i> Verified Sitters</span>
+      <span><i class="fa-solid fa-camera"></i> Daily Updates</span>
+    </div>
+
+  </div>
+</section>
+<section class="pet-overview section" id="pet-overview">
+  <div class="container pet-overview-grid">
+
+    <!-- LEFT TEXT -->
+    <div class="pet-overview-content" data-reveal>
+      <span class="section-eyebrow">Pet Sitting</span>
+
+      <h2 class="section-title">
+        Care that feels like home
+      </h2>
+
+      <p class="pet-overview-text">
+        Your pet stays in the comfort of their own home, surrounded by familiar spaces, smells, and routines.
+      </p>
+
+      <p class="pet-overview-text">
+        Our sitters provide gentle, attentive care — ensuring your pet feels safe, relaxed, and loved while you’re away.
+      </p>
+
+      <ul class="pet-overview-list">
+        <li><i class="fa-solid fa-house"></i> In-home comfort</li>
+        <li><i class="fa-solid fa-clock"></i> Routine consistency</li>
+        <li><i class="fa-solid fa-heart"></i> Personalized attention</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="pet-overview-image" data-reveal data-delay="1">
+      <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=60" alt="Pet sitting at home">
+    </div>
+
+  </div>
+</section>
+<section class="pet-how section" id="pet-how-it-works">
+  <div class="container">
+
+    <div class="section-heading" data-reveal>
+      <span class="section-eyebrow">How It Works</span>
+      <h2 class="section-title">Concierge-level care in four guided steps.</h2>
+      <p class="section-subtitle">A premium, worry-free experience designed around your pet's routine.</p>
+    </div>
+
+    <div class="premium-steps" data-reveal>
+      <article class="premium-step" data-reveal>
+        <span class="premium-step__number">01</span>
+        <div class="premium-step__icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <h3>Book a Sitter</h3>
+        <p>Select dates, visit times, and care preferences in minutes.</p>
+      </article>
+
+      <article class="premium-step" data-reveal data-delay="1">
+        <span class="premium-step__number">02</span>
+        <div class="premium-step__icon"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h3>Share Pet Details</h3>
+        <p>We capture routines, feeding notes, and any special care needs.</p>
+      </article>
+
+      <article class="premium-step" data-reveal data-delay="2">
+        <span class="premium-step__number">03</span>
+        <div class="premium-step__icon"><i class="fa-solid fa-heart"></i></div>
+        <h3>In-Home Care</h3>
+        <p>Your sitter delivers attentive care, play, and companionship.</p>
+      </article>
+
+      <article class="premium-step" data-reveal data-delay="3">
+        <span class="premium-step__number">04</span>
+        <div class="premium-step__icon"><i class="fa-solid fa-camera"></i></div>
+        <h3>Daily Updates</h3>
+        <p>Receive photos, notes, and a full visit summary each day.</p>
+      </article>
+    </div>
+
+  </div>
+</section>
+<section class="pet-pricing section" id="pricing">
+  <div class="container">
+
+    <div class="section-heading" data-reveal>
+      <span class="section-eyebrow">Pricing</span>
+      <h2 class="section-title">Flexible care options for your pet</h2>
+    </div>
+
+    <div class="pet-pricing-grid">
+
+      <!-- HALF DAY -->
+      <div class="pet-price-card" data-reveal>
+        <h3 class="plan-name">Half-Day Sitting</h3>
+        <p class="plan-price">$25<span>/session</span></p>
+
+        <ul class="plan-features">
+          <li>Up to 4 hours care</li>
+          <li>Feeding & companionship</li>
+          <li>Photo updates</li>
+        </ul>
+
+        <a href="contact.html" class="btn btn-outline">Book Now</a>
+      </div>
+
+      <!-- FULL DAY (FEATURED) -->
+      <div class="pet-price-card featured" data-reveal data-delay="1">
+        <span class="plan-badge">Most Popular</span>
+
+        <h3 class="plan-name">Full-Day Sitting</h3>
+        <p class="plan-price">$45<span>/day</span></p>
+
+        <ul class="plan-features">
+          <li>8–10 hours care</li>
+          <li>Routine-based care</li>
+          <li>Multiple updates</li>
+        </ul>
+
+        <a href="contact.html" class="btn btn-primary">Book Now</a>
+      </div>
+
+      <!-- OVERNIGHT -->
+      <div class="pet-price-card" data-reveal data-delay="2">
+        <h3 class="plan-name">Overnight Stay</h3>
+        <p class="plan-price">$75<span>/night</span></p>
+
+        <ul class="plan-features">
+          <li>Overnight supervision</li>
+          <li>Full comfort & safety</li>
+          <li>Morning & evening updates</li>
+        </ul>
+
+        <a href="contact.html" class="btn btn-outline">Book Now</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="pet-cta section" id="pet-final-cta">
+  <div class="container">
+
+    <div class="pet-cta-box" data-reveal>
+
+      <h2 class="pet-cta-title">
+        Give your pet a safe and comfortable stay
+      </h2>
+
+      <p class="pet-cta-text">
+        Enjoy peace of mind knowing your pet is cared for with love, attention, and a familiar routine.
+      </p>
+
+      <div class="pet-cta-actions">
+        <a href="contact.html" class="btn btn-primary">Book Now</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  </main>
+    <footer class="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Pawcare home">
+            <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+            <span class="brand-text">Pawcare</span>
+          </a>
+          <p>Premium pet care with real-time updates, trusted sitters, and services designed around your pet's comfort.</p>
+          <span class="footer-trust">Trusted by 10K+ pet parents</span>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="pet-tips.html">Pet Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="Dogwalking.html">Dog Walking</a></li>
+            <li><a href="pet sitting.html">Pet Sitting</a></li>
+            <li><a href="services.html#overnight-care">Overnight Care</a></li>
+            <li><a href="services.html">All Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+            <li><a href="mailto:hello@pawcare.com">hello@pawcare.com</a></li>
+            <li>Mon-Sun: 7am-9pm</li>
+            <li>Serving NYC & nearby</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>(c) 2026 Pawcare. All rights reserved.</span>
+        <span>Privacy | Terms</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
+
+

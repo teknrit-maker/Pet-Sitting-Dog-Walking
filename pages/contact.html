@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pawcare provides trusted pet sitting, dog walking, and overnight care with seamless booking and real-time updates.">
+  <title>Pawcare | Pet Sitting & Dog Walking Service</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pawcare home">
+        <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+        <span class="brand-text">Pawcare</span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Home
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="index.html">Homepage 1</a>
+              <a class="dropdown-link" href="homepage-2.html">Homepage 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Services
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="Dogwalking.html">Dog Walking</a>
+              <a class="dropdown-link" href="pet sitting.html">Pet Sitting</a>
+              <a class="dropdown-link" href="overnight.html">Overnight Care</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="pet-tips.html">Pet Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Dashboard
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a class="dropdown-link" href="clientdashboard.html">Client Dashboard</a>
+              <a class="dropdown-link" href="admindashboard.html">Admin Dashboard</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
+          <i class="fa-solid fa-align-right"></i>
+        </button>
+        <a class="btn btn-outline" href="login.html">Login</a>
+        <a class="btn btn-primary" href="contact.html">Book Now</a>
+        <button class="hamburger" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="demo-main">
+    <section class="contact-hero section" id="contact-hero">
+  <div class="contact-hero-bg">
+    <img src="../assets/images/contact-hero-bg.avif" alt="Contact pet care">
+  </div>
+
+  <div class="container contact-hero-content" data-reveal>
+
+    <span class="hero-eyebrow">Contact</span>
+
+    <h1 class="contact-hero-title">
+      We’re here to help you and your pet
+    </h1>
+
+    <p class="contact-hero-text">
+      Reach out anytime — our team is ready to assist you with care, guidance, and support.
+    </p>
+
+  </div>
+</section>
+    <section class="contact-options section" id="contact-options">
+      <div class="container">
+
+        <div class="section-heading" data-reveal>
+          <span class="section-eyebrow">Contact Options</span>
+          <h2 class="section-title">Choose the easiest way to reach us.</h2>
+          <p class="section-subtitle">Quick support for bookings, questions, and care updates.</p>
+        </div>
+
+        <div class="contact-options-grid">
+          <article class="contact-option-card" data-reveal>
+            <div class="contact-option-icon"><i class="fa-solid fa-phone"></i></div>
+            <h3>Call Us</h3>
+            <p>Talk with a care coordinator daily from 7am-9pm.</p>
+          </article>
+
+          <article class="contact-option-card" data-reveal data-delay="1">
+            <div class="contact-option-icon"><i class="fa-solid fa-envelope"></i></div>
+            <h3>Email Us</h3>
+            <p>Share details and we will reply within one business day.</p>
+          </article>
+
+          <article class="contact-option-card" data-reveal data-delay="2">
+            <div class="contact-option-icon"><i class="fa-solid fa-comments"></i></div>
+            <h3>Live Chat</h3>
+            <p>Message us for quick questions and booking help.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+    <section class="contact-map section" id="contact-map">
+      <div class="container">
+        <div class="contact-map-shell" data-reveal>
+          <div class="contact-map-embed" aria-label="Map location">
+            <iframe
+              title="Pawcare location map"
+              src="https://maps.google.com/maps?q=New%20York%20NY&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <div class="contact-map-details">
+            <span class="section-eyebrow">Visit Us</span>
+            <h2 class="section-title">Our NYC Home Base</h2>
+            <ul class="contact-details">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>214 Hudson St, New York, NY 10013</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <span>hello@pawcare.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-cta section" id="contact-cta">
+      <div class="container">
+        <div class="contact-cta-card" data-reveal>
+          <h2>Ready to book a service?</h2>
+          <a class="btn btn-primary" href="contact.html">Book Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+    <footer class="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Pawcare home">
+            <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+            <span class="brand-text">Pawcare</span>
+          </a>
+          <p>Premium pet care with real-time updates, trusted sitters, and services designed around your pet's comfort.</p>
+          <span class="footer-trust">Trusted by 10K+ pet parents</span>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="pet-tips.html">Pet Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="Dogwalking.html">Dog Walking</a></li>
+            <li><a href="pet sitting.html">Pet Sitting</a></li>
+            <li><a href="services.html#overnight-care">Overnight Care</a></li>
+            <li><a href="services.html">All Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+            <li><a href="mailto:hello@pawcare.com">hello@pawcare.com</a></li>
+            <li>Mon-Sun: 7am-9pm</li>
+            <li>Serving NYC & nearby</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>(c) 2026 Pawcare. All rights reserved.</span>
+        <span>Privacy | Terms</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
+

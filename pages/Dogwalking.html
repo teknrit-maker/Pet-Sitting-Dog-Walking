@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Pawcare provides trusted pet sitting, dog walking, and overnight care with seamless booking and real-time updates."
+    />
+    <title>Pawcare | Pet Sitting & Dog Walking Service</title>
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Pawcare home">
+          <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+          <span class="brand-text">Pawcare</span>
+        </a>
+
+        <nav class="nav" id="primaryNav" aria-label="Primary">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown">
+              <button
+                class="nav-link dropdown-toggle"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Home
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="dropdown" role="menu">
+                <a class="dropdown-link" href="index.html">Homepage 1</a>
+                <a class="dropdown-link" href="homepage-2.html">Homepage 2</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item has-dropdown">
+              <button
+                class="nav-link dropdown-toggle"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Services
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="dropdown" role="menu">
+                <a class="dropdown-link" href="Dogwalking.html">Dog Walking</a>
+                <a class="dropdown-link" href="pet sitting.html">Pet Sitting</a>
+                <a class="dropdown-link" href="overnight.html"
+                  >Overnight Care</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pet-tips.html">Pet Tips</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item has-dropdown">
+              <button
+                class="nav-link dropdown-toggle"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dashboard
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="dropdown" role="menu">
+                <a class="dropdown-link" href="clientdashboard.html"
+                  >Client Dashboard</a
+                >
+                <a class="dropdown-link" href="admindashboard.html"
+                  >Admin Dashboard</a
+                >
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="icon-btn"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle dark mode"
+            aria-pressed="false"
+          >
+            <i class="fa-regular fa-moon"></i>
+          </button>
+          <button
+            class="icon-btn"
+            id="rtlToggle"
+            type="button"
+            aria-label="Toggle RTL"
+            aria-pressed="false"
+          >
+            <i class="fa-solid fa-align-right"></i>
+          </button>
+          <a class="btn btn-outline" href="login.html">Login</a>
+          <a class="btn btn-primary" href="contact.html">Book Now</a>
+          <button
+            class="hamburger"
+            id="navToggle"
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="primaryNav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="demo-main">
+      <section class="dog-hero section" id="dog-hero">
+        <div class="dog-hero-bg">
+          <img
+            src="../assets/images/dogwalking-service.avif"
+            alt="Dog walking"
+          />
+        </div>
+
+        <div class="container dog-hero-content" data-reveal>
+          <!-- LABEL -->
+          <span class="hero-eyebrow">Dog Walking</span>
+
+          <!-- HEADLINE -->
+          <h1 class="dog-hero-title">
+            Safe, reliable walks your dog will love
+          </h1>
+
+          <!-- SUBTEXT -->
+          <p class="dog-hero-text">
+            Professional walkers, real-time tracking, and personalized care for
+            every step your dog takes.
+          </p>
+
+          <!-- CTA -->
+          <div class="dog-hero-actions">
+            <a href="contact.html" class="btn btn-primary">Book Now</a>
+            <a href="#pricing" class="btn btn-outline">View Pricing</a>
+          </div>
+
+          <!-- TRUST BADGES -->
+          <div class="dog-hero-trust">
+            <span
+              ><i class="fa-solid fa-circle-check"></i> Verified Walkers</span
+            >
+            <span
+              ><i class="fa-solid fa-location-dot"></i> Real-Time Tracking</span
+            >
+          </div>
+        </div>
+      </section>
+      <section class="dog-overview section" id="dog-overview">
+        <div class="container dog-overview-grid">
+          <!-- LEFT TEXT -->
+          <div class="dog-overview-content" data-reveal>
+            <span class="section-eyebrow">Dog Walking</span>
+
+            <h2 class="section-title">Personalized walks for every dog</h2>
+
+            <p class="dog-overview-text">
+              Every dog is different — that’s why our walks are designed around
+              your pet’s energy, routine, and personality.
+            </p>
+
+            <p class="dog-overview-text">
+              From quiet neighborhood strolls to active outdoor routes, our
+              walkers ensure safety, comfort, and care at every step.
+            </p>
+
+            <ul class="dog-overview-list">
+              <li><i class="fa-solid fa-route"></i> Tailored walking routes</li>
+              <li>
+                <i class="fa-solid fa-shield-heart"></i> Safety-first approach
+              </li>
+              <li><i class="fa-solid fa-paw"></i> Personalized care</li>
+            </ul>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+          <div class="dog-overview-image" data-reveal data-delay="1">
+            <img src="../assets/images/dogwalking.avif" alt="Dog walking" />
+          </div>
+        </div>
+      </section>
+        <section class="dog-how section" id="how-it-works">
+          <div class="container">
+            <div class="section-heading" data-reveal>
+              <span class="section-eyebrow">How It Works</span>
+              <h2 class="section-title">Premium steps, tailored for every walk.</h2>
+              <p class="section-subtitle">From booking to live updates, every detail is designed to feel effortless and reassuring.</p>
+            </div>
+
+            <div class="premium-steps" data-reveal>
+              <article class="premium-step" data-reveal>
+                <span class="premium-step__number">01</span>
+                <div class="premium-step__icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <h3>Book a Walk</h3>
+                <p>Choose the time, duration, and walking style that fits your dog.</p>
+              </article>
+
+              <article class="premium-step" data-reveal data-delay="1">
+                <span class="premium-step__number">02</span>
+                <div class="premium-step__icon"><i class="fa-solid fa-user-check"></i></div>
+                <h3>Match a Walker</h3>
+                <p>We pair you with a verified walker who understands your pet.</p>
+              </article>
+
+              <article class="premium-step" data-reveal data-delay="2">
+                <span class="premium-step__number">03</span>
+                <div class="premium-step__icon"><i class="fa-solid fa-paw"></i></div>
+                <h3>The Walk</h3>
+                <p>Engaging routes with safety-first pacing and enrichment.</p>
+              </article>
+
+              <article class="premium-step" data-reveal data-delay="3">
+                <span class="premium-step__number">04</span>
+                <div class="premium-step__icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Live Updates</h3>
+                <p>Receive GPS tracking, photos, and a personalized summary.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      <section class="dog-benefits section" id="benefits">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="section-eyebrow">Benefits</span>
+            <h2 class="section-title">
+              Everything your dog needs for a perfect walk
+            </h2>
+          </div>
+
+          <div class="dog-benefits-grid">
+            <!-- CARD 1 -->
+            <div class="benefit-card" data-reveal>
+              <div class="benefit-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h3>GPS Tracking</h3>
+              <p>
+                Track your dog’s walk in real-time with accurate location
+                updates.
+              </p>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="benefit-card" data-reveal data-delay="1">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-camera"></i>
+              </div>
+              <h3>Photo Updates</h3>
+              <p>Receive photos and updates so you never miss a moment.</p>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="benefit-card" data-reveal data-delay="2">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h3>Verified Walkers</h3>
+              <p>All walkers are background-checked and experienced.</p>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="benefit-card" data-reveal data-delay="3">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <h3>Flexible Timing</h3>
+              <p>Schedule walks anytime that fits your routine.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dog-pricing section" id="pricing">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="section-eyebrow">Pricing</span>
+            <h2 class="section-title">Choose the right walk for your dog</h2>
+          </div>
+
+          <div class="dog-pricing-grid">
+            <!-- 15 MIN -->
+            <div class="dog-price-card" data-reveal>
+              <h3 class="plan-name">15 Min Walk</h3>
+              <p class="plan-price">$9<span>/walk</span></p>
+
+              <ul class="plan-features">
+                <li>Quick energy release</li>
+                <li>Short neighborhood route</li>
+                <li>Photo update included</li>
+              </ul>
+
+              <a href="contact.html" class="btn btn-outline">Book Now</a>
+            </div>
+
+            <!-- 30 MIN (FEATURED) -->
+            <div class="dog-price-card featured" data-reveal data-delay="1">
+              <span class="plan-badge">Most Popular</span>
+
+              <h3 class="plan-name">30 Min Walk</h3>
+              <p class="plan-price">$15<span>/walk</span></p>
+
+              <ul class="plan-features">
+                <li>Balanced exercise</li>
+                <li>Real-time GPS tracking</li>
+                <li>Photo + activity report</li>
+              </ul>
+
+              <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+
+            <!-- 60 MIN -->
+            <div class="dog-price-card" data-reveal data-delay="2">
+              <h3 class="plan-name">60 Min Walk</h3>
+              <p class="plan-price">$25<span>/walk</span></p>
+
+              <ul class="plan-features">
+                <li>Extended outdoor time</li>
+                <li>High-energy play session</li>
+                <li>Detailed walk summary</li>
+              </ul>
+
+              <a href="contact.html" class="btn btn-outline">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dog-cta section" id="dog-final-cta">
+        <div class="container">
+          <div class="dog-cta-box" data-reveal>
+            <h2 class="dog-cta-title">Book your dog’s next walk today</h2>
+
+            <p class="dog-cta-text">
+              Give your dog the care, attention, and exercise they deserve —
+              with trusted walkers by your side.
+            </p>
+
+            <div class="dog-cta-actions">
+              <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html" aria-label="Pawcare home">
+              <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+              <span class="brand-text">Pawcare</span>
+            </a>
+            <p>
+              Premium pet care with real-time updates, trusted sitters, and
+              services designed around your pet's comfort.
+            </p>
+            <span class="footer-trust">Trusted by 10K+ pet parents</span>
+          </div>
+          <div class="footer-col">
+            <h4>Links</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">About</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="pet-tips.html">Pet Tips</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul class="footer-links">
+              <li><a href="Dogwalking.html">Dog Walking</a></li>
+              <li><a href="pet sitting.html">Pet Sitting</a></li>
+              <li><a href="services.html#overnight-care">Overnight Care</a></li>
+              <li><a href="services.html">All Services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+              <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+              <li><a href="mailto:hello@pawcare.com">hello@pawcare.com</a></li>
+              <li>Mon-Sun: 7am-9pm</li>
+              <li>Serving NYC & nearby</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>(c) 2026 Pawcare. All rights reserved.</span>
+          <span>Privacy | Terms</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
+

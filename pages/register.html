@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create a Pawcare account to book trusted pet care services.">
+  <title>Pawcare | Register</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="auth-body">
+  <main class="auth-page">
+    <div class="auth-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+      <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
+        <i class="fa-solid fa-align-right"></i>
+      </button>
+    </div>
+
+    <div class="auth-shell">
+      <section class="auth-visual" aria-label="Pawcare premium care">
+        <img src="../assets/images/dogwalking-registerpage.avif" alt="Sitter walking a happy dog">
+        <div class="auth-visual-card">
+          <span class="auth-kicker">Premium Onboarding</span>
+          <h2>Trusted care for your beloved pets</h2>
+          <p>Join thousands of pet parents who rely on verified sitters, real-time updates, and concierge support.</p>
+          <div class="auth-metrics">
+            <div class="auth-metric">
+              <strong>Verified</strong>
+              <span>Background-checked sitters</span>
+            </div>
+            <div class="auth-metric">
+              <strong>24/7</strong>
+              <span>Care team support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="auth-panel">
+        <div class="auth-card">
+          <a class="brand" href="index.html" aria-label="Pawcare home">
+            <span class="brand-icon"><i class="fa-solid fa-paw"></i></span>
+            <span class="brand-text">Pawcare</span>
+          </a>
+
+          <div class="auth-heading">
+            <h1 class="auth-title">Create Your Account</h1>
+            <p class="auth-subtitle">Join us to book trusted pet care services</p>
+          </div>
+
+          <form class="auth-form" action="#" method="post">
+            <div class="auth-section">
+              <div class="auth-section-header">
+                <span class="auth-section-title">Basic Info</span>
+                <span class="auth-section-note">Required</span>
+              </div>
+              <div class="auth-grid">
+                <label class="form-field">
+                  <span>Full Name</span>
+                  <input type="text" name="fullName" placeholder="Jordan Miles" autocomplete="name" required>
+                  <small class="auth-hint">Use the name on your account.</small>
+                </label>
+                <label class="form-field">
+                  <span>Email</span>
+                  <input type="email" name="email" placeholder="you@pawcare.com" autocomplete="email" required>
+                  <small class="auth-hint">We'll send booking updates here.</small>
+                </label>
+                <label class="form-field full">
+                  <span>Phone Number</span>
+                  <input type="tel" name="phone" placeholder="+1 (555) 123-4567" autocomplete="tel" required>
+                  <small class="auth-hint">Used for visit confirmations.</small>
+                </label>
+              </div>
+            </div>
+
+            <div class="auth-section">
+              <div class="auth-section-header">
+                <span class="auth-section-title">Account</span>
+              </div>
+              <div class="auth-grid">
+                <label class="form-field full">
+                  <span>Password</span>
+                  <div class="auth-input">
+                    <input id="register-password" type="password" name="password" placeholder="Create a password" minlength="8" autocomplete="new-password" required>
+                    <button class="auth-toggle" type="button" data-toggle="register-password" aria-pressed="false">Show</button>
+                  </div>
+                  <small class="auth-hint">At least 8 characters.</small>
+                </label>
+                <label class="form-field full">
+                  <span>Confirm Password</span>
+                  <div class="auth-input">
+                    <input id="register-confirm" type="password" name="confirmPassword" placeholder="Re-enter your password" minlength="8" autocomplete="new-password" required>
+                    <button class="auth-toggle" type="button" data-toggle="register-confirm" aria-pressed="false">Show</button>
+                  </div>
+                  <small class="auth-hint is-error">Must match your password.</small>
+                </label>
+              </div>
+            </div>
+
+            <div class="auth-section">
+              <div class="auth-section-header">
+                <span class="auth-section-title">Optional</span>
+                <span class="auth-section-note">Select a role</span>
+              </div>
+              <div class="auth-role-group" role="radiogroup" aria-label="Select account role">
+                <label class="auth-role">
+                  <input type="radio" name="role" value="pet-owner" checked>
+                  <span>Pet Owner</span>
+                </label>
+                <label class="auth-role">
+                  <input type="radio" name="role" value="sitter">
+                  <span>Sitter</span>
+                </label>
+              </div>
+            </div>
+
+            <label class="auth-terms">
+              <input type="checkbox" name="terms" required>
+              <span>I agree to the <a class="auth-link" href="comingsoon.html">Terms &amp; Conditions</a></span>
+            </label>
+
+            <button class="btn btn-primary auth-submit" type="submit">Create Account</button>
+
+            <div class="auth-divider">
+              <span>or</span>
+            </div>
+
+            <button class="btn btn-outline auth-google" type="button" aria-label="Continue with Google">
+              <i class="fa-brands fa-google"></i>
+              Continue with Google
+            </button>
+          </form>
+
+          <p class="auth-footer">
+            Already have an account? <a class="auth-link" href="login.html">Login</a>
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    const toggleButtons = document.querySelectorAll("[data-toggle]");
+    toggleButtons.forEach((button) => {
+      const targetId = button.getAttribute("data-toggle");
+      const targetInput = document.getElementById(targetId);
+      if (!targetInput) return;
+      button.addEventListener("click", () => {
+        const isPassword = targetInput.type === "password";
+        targetInput.type = isPassword ? "text" : "password";
+        button.textContent = isPassword ? "Hide" : "Show";
+        button.setAttribute("aria-pressed", isPassword ? "true" : "false");
+      });
+    });
+  </script>
+</body>
+</html>
