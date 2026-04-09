@@ -113,6 +113,28 @@ if (rtlToggle) {
   });
 }
 
+const passwordToggles = document.querySelectorAll("[data-toggle]");
+passwordToggles.forEach((button) => {
+  const targetId = button.getAttribute("data-toggle");
+  const targetInput = document.getElementById(targetId);
+  if (!targetInput) return;
+  const icon = button.querySelector("i");
+  const label = button.querySelector(".toggle-label");
+  button.addEventListener("click", () => {
+    const isPassword = targetInput.type === "password";
+    targetInput.type = isPassword ? "text" : "password";
+    button.setAttribute("aria-pressed", isPassword ? "true" : "false");
+    button.setAttribute("aria-label", isPassword ? "Hide password" : "Show password");
+    if (label) {
+      label.textContent = isPassword ? "Hide" : "Show";
+    }
+    if (icon) {
+      icon.classList.toggle("fa-eye", !isPassword);
+      icon.classList.toggle("fa-eye-slash", isPassword);
+    }
+  });
+});
+
 const markActiveNav = () => {
   const path = window.location.pathname.split("/").pop() || "index.html";
   const navLinks = document.querySelectorAll(".nav a");

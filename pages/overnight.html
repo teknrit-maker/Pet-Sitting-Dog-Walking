@@ -59,6 +59,12 @@
               <a class="dropdown-link" href="admindashboard.html">Admin Dashboard</a>
             </div>
           </li>
+          <li class="nav-item nav-cta">
+            <a class="btn btn-outline nav-cta-btn" href="login.html">Login</a>
+          </li>
+          <li class="nav-item nav-cta">
+            <a class="btn btn-primary nav-cta-btn" href="contact.html">Book Now</a>
+          </li>
         </ul>
       </nav>
 
@@ -67,7 +73,7 @@
           <i class="fa-regular fa-moon"></i>
         </button>
         <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
-          <i class="fa-solid fa-align-right"></i>
+          <i class="fa-solid fa-right-left"></i>
         </button>
         <a class="btn btn-outline" href="login.html">Login</a>
         <a class="btn btn-primary" href="contact.html">Book Now</a>
@@ -104,7 +110,7 @@
     <!-- CTA -->
     <div class="overnight-hero-actions">
       <a href="contact.html" class="btn btn-primary">Book Now</a>
-      <a href="#pricing" class="btn btn-outline">View Pricing</a>
+      <a href="pricing.html" class="btn btn-outline">View Pricing</a>
     </div>
 
     <!-- TRUST BADGES -->
@@ -159,6 +165,7 @@
 
     <div class="premium-steps" data-reveal>
       <article class="premium-step" data-reveal>
+        <img class="premium-step__image" src="../assets/images/overnight-service.avif" alt="Cozy overnight setup for a pet">
         <span class="premium-step__number">01</span>
         <div class="premium-step__icon"><i class="fa-solid fa-calendar-check"></i></div>
         <h3>Book Overnight Stay</h3>
@@ -166,6 +173,7 @@
       </article>
 
       <article class="premium-step" data-reveal data-delay="1">
+        <img class="premium-step__image" src="../assets/images/dogupdate.avif" alt="Care notes and updates for a pet">
         <span class="premium-step__number">02</span>
         <div class="premium-step__icon"><i class="fa-solid fa-clipboard-list"></i></div>
         <h3>Share Care Notes</h3>
@@ -173,6 +181,7 @@
       </article>
 
       <article class="premium-step" data-reveal data-delay="2">
+        <img class="premium-step__image" src="../assets/images/happydog.avif" alt="Sitter spending time with a happy dog">
         <span class="premium-step__number">03</span>
         <div class="premium-step__icon"><i class="fa-solid fa-moon"></i></div>
         <h3>Sitter Stays Overnight</h3>
@@ -180,6 +189,7 @@
       </article>
 
       <article class="premium-step" data-reveal data-delay="3">
+        <img class="premium-step__image" src="../assets/images/doglivetrack.avif" alt="Morning update with pet activity">
         <span class="premium-step__number">04</span>
         <div class="premium-step__icon"><i class="fa-solid fa-camera"></i></div>
         <h3>Morning Updates</h3>
@@ -205,7 +215,7 @@
           <i class="fa-solid fa-moon"></i>
         </div>
         <h3>Overnight Supervision</h3>
-        <p>Your pet is never alone — a sitter stays present throughout the night.</p>
+        <p>Your pet is never alone &mdash; a sitter stays present throughout the night.</p>
       </div>
 
       <!-- CARD 2 -->
@@ -214,7 +224,7 @@
           <i class="fa-solid fa-shield-heart"></i>
         </div>
         <h3>Emergency Readiness</h3>
-        <p>Prepared to respond quickly to any situation for your pet’s safety.</p>
+        <p>Prepared to respond quickly to any situation for your pet&rsquo;s safety.</p>
       </div>
 
       <!-- CARD 3 -->
@@ -223,7 +233,7 @@
           <i class="fa-solid fa-clock"></i>
         </div>
         <h3>Routine Continuity</h3>
-        <p>Maintains your pet’s normal schedule to reduce stress and anxiety.</p>
+        <p>Maintains your pet&rsquo;s normal schedule to reduce stress and anxiety.</p>
       </div>
 
       <!-- CARD 4 -->
@@ -239,66 +249,7 @@
 
   </div>
 </section>
-<section class="overnight-pricing section" id="pricing">
-  <div class="container">
-
-    <div class="section-heading" data-reveal>
-      <span class="section-eyebrow">Pricing</span>
-      <h2 class="section-title">Choose the right overnight care</h2>
-    </div>
-
-    <div class="overnight-pricing-grid">
-
-      <!-- BASIC -->
-      <div class="overnight-price-card" data-reveal>
-        <h3 class="plan-name">Basic Overnight</h3>
-        <p class="plan-price">$60<span>/night</span></p>
-
-        <ul class="plan-features">
-          <li>Night supervision</li>
-          <li>Basic care & feeding</li>
-          <li>Morning update</li>
-        </ul>
-
-        <a href="contact.html" class="btn btn-outline">Book Now</a>
-      </div>
-
-      <!-- STANDARD (FEATURED) -->
-      <div class="overnight-price-card featured" data-reveal data-delay="1">
-        <span class="plan-badge">Most Popular</span>
-
-        <h3 class="plan-name">Standard Overnight</h3>
-        <p class="plan-price">$85<span>/night</span></p>
-
-        <ul class="plan-features">
-          <li>Full overnight supervision</li>
-          <li>Routine-based care</li>
-          <li>Photo + status updates</li>
-        </ul>
-
-        <a href="contact.html" class="btn btn-primary">Book Now</a>
-      </div>
-
-      <!-- PREMIUM -->
-      <div class="overnight-price-card" data-reveal data-delay="2">
-        <h3 class="plan-name">Premium Overnight</h3>
-        <p class="plan-price">$120<span>/night</span></p>
-
-        <ul class="plan-features">
-          <li>Priority sitter</li>
-          <li>Emergency-ready care</li>
-          <li>Detailed updates & tracking</li>
-        </ul>
-
-        <a href="contact.html" class="btn btn-outline">Book Now</a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-  </main>
+</main>
     <footer class="site-footer">
     <div class="container footer-shell">
       <div class="footer-grid">
@@ -348,4 +299,10 @@
   <script src="../assets/js/main.js" defer></script>
 </body>
 </html>
+
+
+
+
+
+
 

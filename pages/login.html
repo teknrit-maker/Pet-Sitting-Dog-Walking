@@ -21,7 +21,7 @@
         <i class="fa-regular fa-moon"></i>
       </button>
       <button class="icon-btn" id="rtlToggle" type="button" aria-label="Toggle RTL" aria-pressed="false">
-        <i class="fa-solid fa-align-right"></i>
+        <i class="fa-solid fa-right-left"></i>
       </button>
     </div>
 
@@ -65,7 +65,12 @@
 
             <label class="form-field">
               <span>Password</span>
-              <input type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+              <div class="auth-input">
+                <input id="login-password" type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                <button class="auth-toggle auth-toggle-icon" type="button" data-toggle="login-password" aria-label="Show password" aria-pressed="false">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
             </label>
 
             <div class="auth-options">
@@ -82,6 +87,10 @@
               <span>or</span>
             </div>
 
+            <button class="btn auth-apple" type="button" aria-label="Continue with Apple">
+              <i class="fa-brands fa-apple"></i>
+              Continue with Apple
+            </button>
             <button class="btn btn-outline auth-google" type="button" aria-label="Continue with Google">
               <i class="fa-brands fa-google"></i>
               Continue with Google
@@ -99,3 +108,4 @@
   <script src="../assets/js/main.js" defer></script>
 </body>
 </html>
+
