@@ -7486,6 +7486,11 @@ img {
   gap: var(--space-3);
 }
 
+.auth-card > .brand {
+  align-self: center;
+  justify-content: center;
+}
+
 .auth-card--compact {
   padding: var(--space-4);
   gap: var(--space-2);
